@@ -152,6 +152,7 @@ public class imgViewer extends JApplet implements ActionListener, MouseListener,
     //-------------------------
     public void init()
     {
+    	ProxySettings.init();
         int imgViewSizeX = 650; // image display area width
         int imgViewSizeY = 650; // image display area height
         String tempSensor;
