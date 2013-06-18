@@ -1,0 +1,783 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Content-Language" content="en-us">
+   <meta charset="UTF-8">
+<title>USGS Global Visualization Viewer Metadata Glossary</title>
+<link rel="stylesheet" href="../includes/glovis.css" type="text/css">
+<meta name="description" content="USGS Global Visualization">
+<meta name="keywords" content="Global Visualization, EROS, Imagery,
+    Browse Images, Satellite, EO-1, Satellite Data, World">
+<meta name="publisher" content="USGS - US Geological Survey, EROS">
+<meta name="abstract" content=" ">
+</head>
+<body bgcolor="#FFFFFF">
+<!--#include virtual="/includes/header_glovisb2.html" -->
+<br>
+<br>
+<font class="glovistitle2">USGS Global Visualization Viewer Metadata Glossary:
+EO-1</font>
+
+<hr>
+<blockquote>
+<table width="100%">
+<tr valign=TOP>
+<td>
+    <li><a href="#entity_id">Entity ID</a></li>
+    <li><a href="#acquisition_date">Acquisition Date</a></li>
+    <li><a href="#nw_corner">NW Corner</a></li>
+    <li><a href="#ne_corner">NE Corner</a></li>
+    <li><a href="#sw_corner">SW Corner</a></li>
+    <li><a href="#se_corner">SE Corner</a></li>
+    <li><a href="#image_cloud_cover">Image Cloud Cover</a></li>
+</td>
+<td>
+    <li><a href="#image_quality">Image Quality</a></li>
+    <li><a href="#receiving_station">Receiving Station</a></li>
+    <li><a href="#scene_start_time">Scene Start Time</a></li>
+    <li><a href="#scene_stop_time">Scene Stop Time</a></li>
+    <li><a href="#date_entered">Date Entered</a></li>
+    <li><a href="#target_path">Target Path</a></li>
+    <li><a href="#target_row">Target Row</a></li>
+</td>
+<td>
+    <li><a href="#orbit_path">Orbit Path</a></li>
+    <li><a href="#orbit_row">Orbit Row</a></li>
+    <li><a href="#browse_available">Browse Available</a></li>
+    <li><a href="#look_angle">Look Angle</a></li>
+    <li><a href="#sun_azimuth">Sun Azimuth</a></li>
+    <li><a href="#sun_elevation">Sun Elevation</a></li>
+    <li><a href="#std_l1_process_level">Standard L1 Processing Level</a></li>
+</td>
+</tr>
+</table>
+</blockquote>
+
+<dl>
+
+<dt>
+<a NAME="entity_id"></a><b>Entity ID</b></dt>
+
+<dd>
+<i>Definition:</i> This field uniquely identifies data, which can be
+                   ordered in any combination of unique products.
+</dd>
+<br>
+<dl>
+    <dt>
+    <i>Format Example:</i> EO1SPPPRRRYYYYDDDXXXML_GGG_VV
+    </dt>
+    <br>
+    <dd>
+    <table width="100%">
+    <tr VALIGN=TOP>
+        <td>EO1</td>
+        <td>Satellite</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>S</td>
+        <td>Sensor (H=Hyperion, A=ALI)</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>PPP</td>
+        <td>Target WRS Path *</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>RRR</td>
+        <td>Target WRS Row *</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>YYYY</td>
+        <td>Year of acquisition</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>DDD</td>
+        <td>Day of the year of acquisition</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>X</td>
+        <td>(0=off; 1=on) Hyperion</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>X</td>
+        <td>(0=off; 1=on) ALI</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>X</td>
+        <td>(0=off; 1=on) AC</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>M</td>
+        <td>Pointing Mode
+            (N=Nadir, P=Pointed within path/row, K=Pointed outside path/row)
+        </td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>L</td>
+        <td>Scene Length
+            (F=Full scene, P=Partial scene, Q=Second partial scene, S=Swath)
+        </td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>GGG</td>
+        <td>Ground/Receiving Station</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>VV</td>
+        <td>Version Number</td>
+    </tr>
+
+    </table>
+    </dd>
+</dl>
+
+</dd>
+<br>
+<dt>
+<a NAME="acquisition_date"></a><b>Acquisition Date</b>
+</dt>
+
+<dd>
+<i>Definition:</i> The date the image was acquired.
+</dd>
+<br>
+<dd>
+<i>Format: </i> YYYY/MM/DD
+</dd>
+<br>
+
+<dt>
+<a NAME="nw_corner"></a><b>NW Corner</b></dt>
+<dd>
+<i>Definition:</i>Latitude and longitude of northwest corner.</dd>
+<br>
+<dl>
+    <dt>Northwest Latitude:</dt>
+    <dd><i>Definition:</i> WRS scene northwest "actual" latitude for a
+                          full or partial scene</dd>
+    <br>
+    <dd><i>Format example:</i> DD&deg;MM'SS&quot;H
+    <br>
+    <table width=40%>
+        <tr VALIGN=TOP>
+            <td>DD</td>
+            <td>degrees</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>MM</td>
+            <td>minutes</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>SS</td>
+            <td>seconds</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>H</td>
+            <td>hemisphere (N=North; S=South)</td>
+        </tr>
+    </table>
+    </dd>
+    <br>
+    <dt>Northwest Longitude:</dt>
+    <dd><i>Definition:</i> WRS scene northwest "actual" longitude for a
+                          full or partial scene</dd>
+    <br>
+    <dd><i>Format example:</i> DD&deg;MM'SS&quot;H
+    <br>
+    <table width=40%>
+        <tr VALIGN=TOP>
+            <td>DD</td>
+            <td>degrees</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>MM</td>
+            <td>minutes</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>SS</td>
+            <td>seconds</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>H</td>
+            <td>hemisphere (W=West; E=East)</td>
+        </tr>
+    </table>
+    </dd>
+</dl>
+<br>
+
+<dt>
+<a NAME="ne_corner"></a><b>NE Corner</b></dt>
+<dd>
+<i>Definition:</i> Latitude and longitude of northeast corner.</dd>
+<br>
+<dl>
+    <dt>Northeast Latitude:</dt>
+    <dd><i>Definition:</i> WRS scene northeast "actual" latitude for a
+                          full or partial scene</dd>
+    <br>
+    <dd><i>Format example:</i> DD&deg;MM'SS&quot;H
+    <br>
+    <table width=40%>
+        <tr VALIGN=TOP>
+            <td>DD</td>
+            <td>degrees</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>MM</td>
+            <td>minutes</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>SS</td>
+            <td>seconds</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>H</td>
+            <td>hemisphere (N=North; S=South)</td>
+        </tr>
+    </table>
+    </dd>
+    <br>
+    <dt>Northeast Longitude:</dt>
+    <dd><i>Definition:</i> WRS scene northeast "actual" longitude for a
+                          full or partial scene</dd>
+    <br>
+    <dd><i>Format example:</i> DD&deg;MM'SS&quot;H
+    <br>
+    <table width=40%>
+        <tr VALIGN=TOP>
+            <td>DD</td>
+            <td>degrees</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>MM</td>
+            <td>minutes</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>SS</td>
+            <td>seconds</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>H</td>
+            <td>hemisphere (W=West; E=East)</td>
+        </tr>
+    </table>
+    </dd>
+</dl>
+<br>
+
+<dt>
+<a NAME="sw_corner"></a><b>SW Corner</b></dt>
+<dd>
+<i>Definition:</i> Latitude and longitude of southwest corner.</dd>
+<br>
+<dl>
+    <dt>Southwest Latitude:</dt>
+    <dd><i>Definition:</i> WRS scene southwest "actual" latitude for a
+                          full or partial scene</dd>
+    <br>
+    <dd><i>Format example:</i> DD&deg;MM'SS&quot;H
+    <br>
+    <table width=40%>
+        <tr VALIGN=TOP>
+            <td>DD</td>
+            <td>degrees</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>MM</td>
+            <td>minutes</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>SS</td>
+            <td>seconds</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>H</td>
+            <td>hemisphere (N=North; S=South)</td>
+        </tr>
+    </table>
+    </dd>
+    <br>
+    <dt>Southwest Longitude:</dt>
+    <dd><i>Definition:</i> WRS scene southwest "actual" longitude for a
+                          full or partial scene</dd>
+    <br>
+    <dd><i>Format example:</i> DD&deg;MM'SS&quot;H
+    <br>
+    <table width=40%>
+        <tr VALIGN=TOP>
+            <td>DD</td>
+            <td>degrees</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>MM</td>
+            <td>minutes</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>SS</td>
+            <td>seconds</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>H</td>
+            <td>hemisphere (W=West; E=East)</td>
+        </tr>
+    </table>
+    </dd>
+</dl>
+<br>
+
+<dt>
+<a NAME="se_corner"></a><b>SE Corner</b>
+</dt>
+<dd>
+<i>Definition:</i> Latitude and longitude of southeast corner.
+</dd>
+<br>
+<dl>
+    <dt>Southeast Latitude:
+    </dt>
+    <dd><i>Definition:</i> WRS scene southeast "actual" latitude for a
+                          full or partial scene</dd>
+    <br>
+    <dd><i>Format example:</i> DD&deg;MM'SS&quot;H
+    <br>
+    <table width=40%>
+        <tr VALIGN=TOP>
+            <td>DD</td>
+            <td>degrees</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>MM</td>
+            <td>minutes</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>SS</td>
+            <td>seconds</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>H</td>
+            <td>hemisphere (N=North; S=South)</td>
+        </tr>
+    </table>
+    </dd>
+    <br>
+    <dt>Southeast Longitude:</dt>
+    <dd><i>Definition:</i> WRS scene southeast "actual" longitude for a
+                          full or partial scene</dd>
+    <br>
+    <dd><i>Format example:</i> DD&deg;MM'SS&quot;H
+    <br>
+    <table width=40%>
+        <tr VALIGN=TOP>
+            <td>DD</td>
+            <td>degrees</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>MM</td>
+            <td>minutes</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>SS</td>
+            <td>seconds</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>H</td>
+            <td>hemisphere (W=West; E=East)</td>
+        </tr>
+    </table>
+    </dd>
+</dl>
+<br>
+
+<dt>
+<a NAME="image_cloud_cover"></a><b>Image Cloud Cover</b>
+</dt>
+<dd>
+<i>Definition:</i> Cloud Cover is the percentage of the entire image obscured
+    by clouds and their shadows. Users are encouraged to preview browses
+    prior to ordering data products to confirm acceptable cloud cover impacts.
+    Values may not be available for all scenes.
+</dd>
+<br>
+<dd>
+<i>Valid values:</i>
+<table width=80%>
+    <tr VALIGN=TOP>
+        <td>0% to 9% Cloud Cover</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>10% to 19% Cloud Cover</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>20% to 29% Cloud Cover</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>30% to 39% Cloud Cover</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>40% to 49% Cloud Cover</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>50% to 59% Cloud Cover</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>60% to 69% Cloud Cover</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>70% to 79% Cloud Cover</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>80% to 89% Cloud Cover</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>90% to 99% Cloud Cover</td>
+    </tr>
+</table>
+<br>
+
+<dt>
+<a NAME="image_quality"></a><b>Image Quality</b>
+</dt>
+<dd>
+<i>Definition:</i> A single digit number that represents an image quality value.
+    The image quality is based on the number and distribution of bad scans
+    or equivalent bad scans in a scene.
+</dd>
+<br>
+<dd><i>Valid codes:</i>
+<table width=40%>
+    <tr VALIGN=TOP>
+        <td>9</td>
+        <td>Very Good<td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>8</td>
+        <td>Good<td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>7</td>
+        <td>Good<td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>6</td>
+        <td>Fair<td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>5</td>
+        <td>Fair<td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>4</td>
+        <td>Fair<td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>3</td>
+        <td>Poor<td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>2</td>
+        <td>Poor<td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>1</td>
+        <td>Poor</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>0</td>
+        <td>Very Poor</td>
+    </tr>
+</table>
+</dd>
+<br>
+
+<dt>
+<a NAME="receiving_station"></a><b>Receiving Station</b>
+</dt>
+<dd>
+<i>Definition:</i> Original ground receiving station site
+</dd>
+<br>
+<dd><i>Valid codes:</i>
+<table width=100%>
+    <tr VALIGN=TOP>
+        <td width=10%>LGS</td>
+        <td>Landsat Ground Station</td>
+        <td>USGS Multi-Satellite Ground Station, Sioux Falls, SD, USA</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td width=10%>SGS</td>
+        <td>Svalbard Ground Station</td>
+        <td>Longyearbyen, Norway</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td width=10%>PF1</td>
+        <td>Poker Flat 1, Datalynx Ground Station</td>
+        <td>Poker Flat, AK, USA</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td width=10%>AGS</td>
+        <td>Alaska Ground Station</td>
+        <td>Poker Flat, AK, USA</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td width=10%>AKS</td>
+        <td>DataLynx Ground Station</td>
+        <td>Poker Flat, AK, USA</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td width=10%>WGS</td>
+        <td>Wallops Ground Station</td>
+        <td>Wallops Island, VA, USA</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td width=10%>HGS</td>
+        <td>Tasmanian Earth Resources Satellite Station (Hobart)</td>
+        <td>Hobart, Australia</td>
+    </tr>
+</table>
+</dd>
+<br>
+
+<dt>
+<a NAME="scene_start_time"></a><b>Scene Start Time</b>
+</dt>
+<dd>
+<i>Definition:</i> The configuration stating the year, day, hour, minute,
+    second in which the satellite was turned on for image swathing.
+</dd>
+<br>
+<dl>
+    <dt>
+    <i>Format Example:</i> YYYY:DDD:HH:MM:SS.TTTTTT
+    </dt>
+    <br>
+    <dd>
+    <table width=80%>
+        <tr VALIGN=TOP>
+            <td>YYYY</td>
+            <td>Four-digit Julian year</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>DDD</td>
+            <td>Day (001-366) (366 is for leap year)</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>HH</td>
+            <td>Hours (00-23)</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>MM</td>
+            <td>Minutes (00-59)</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>SS</td>
+            <td>Seconds (00-59)</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>TTTTT</td>
+            <td>Fractional Seconds</td>
+        </tr>
+    </table>
+    </dd>
+</dl>
+<br>
+
+<dt>
+<a NAME="scene_stop_time"></a><b>Scene Stop Time</b>
+</dt>
+<dd>
+<i>Definition:</i> The configuration stating the year, day, hour, minute,
+    second in which the satellite was turned off for image swathing.
+</dd>
+<br>
+<dl>
+    <dt>
+    <i>Format example:</i> YYYY:DDD:HH:MM:SS.TTTTTT
+    </dt>
+    <br>
+    <dd>
+    <table width=80%>
+        <tr VALIGN=TOP>
+            <td>YYYY</td>
+            <td>Four-digit Julian year</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>DDD</td>
+            <td>Day (001-366) (366 is for leap year)</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>HH</td>
+            <td>Hours (00-23)</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>MM</td>
+            <td>Minutes (00-59)</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>SS</td>
+            <td>Seconds (00-59)</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>TTTTT</td>
+            <td>Fractional Seconds</td>
+        </tr>
+    </table>
+    </dd>
+</dl>
+<br>
+
+<dt>
+<a NAME="date_entered"></a><b>Date Entered</b>
+</dt>
+<dd>
+<i>Definition:</i> The date the inventory record was added to the inventory.
+</dd>
+<br>
+<dd>
+<i>Format: </i> YYYY/MM/DD
+</dd>
+<br>
+
+<dt>
+<a NAME="target_path"></a><b>Target Path</b>
+</dt>
+<dd>
+<i>Definition:</i> The <b>Target WRS Path</b> number associated with the
+    start of the scene.  Not always on WRS.
+</dd>
+<br>
+<dd>
+<i>Valid values:</i> 001-233
+</dd>
+<br>
+
+<dt>
+<a NAME="target_row"></a><b>Target Row</b>
+</dt>
+<dd>
+<i>Definition:</i> The <b>Target WRS Row</b> number associated with the
+   start of the scene. Not always on WRS.
+</dd>
+<br>
+<dd>
+<i>Valid values:</i> 001-248 (Note: GloVis only displays 001-124)
+</dd>
+<br>
+
+<dt>
+<a NAME="orbit_path"></a><b>Orbit Path</b>
+</dt>
+<dd>
+<i>Definition:</i> The WRS Path number over which the satellite was orbiting
+    when the data was collected. This can be different from the Target Path
+    because the sensor can be pointed to collect data from a different path.
+</dd>
+<br>
+<dd>
+<i>Valid values:</i> 001-233
+</dd>
+<br>
+
+<dt>
+<a NAME="orbit_row"></a><b>Orbit Row</b>
+</dt>
+<dd>
+<i>Definition:</i> The WRS Row number over which the satellite was orbiting
+    when the data was collected. This can be different from the Target Row
+    because the sensor can be pointed to collect data from a different row.
+</dd>
+<br>
+<dd>
+<i>Valid values:</i> 001-248 (Note: GloVis only displays 001-124)
+</dd>
+<br>
+
+<dt>
+<a NAME="browse_available"></a><b>Browse Available</b>
+</dt>
+<dd>
+<i>Definition:</i> This flag identifies whether or not the entity has a
+    browse image available with it. A browse image provides the user with a
+    visual overview of an inventory item. This is an on-line digital (raster
+    format) image of an individual scene.
+</dd>
+<br>
+<dd>
+<i>Valid codes:</i>
+<ul>
+    <li>Y = Yes
+    <li>N = No
+</ul>
+</dd>
+<br>
+
+<dt>
+<a NAME="look_angle"></a><b>Look Angle</b>
+</dt>
+<dd>
+<i>Definition:</i> The angle from the nadir of the satellite, to the
+    satellite, to the center of the targeted image.  EO-1 follows the WRS-2
+    path and row system.
+</dd>
+<br>
+<dd>
+<i>Valid values:</i> -17.433 through 17.433
+</dd>
+<br>
+
+<dt>
+<a NAME="sun_azimuth"></a><b>Sun Azimuth</b>
+</dt>
+<dd>
+<i>Definition:</i> Azimuth is the angle of horizontal deviation,
+    measured clockwise, of a bearing from a standard direction.
+</dd>
+<br>
+<dd>
+<i>Valid values:</i> -180.000000 through +180.000000 degrees
+</dd>
+<br>
+<dd>
+Note:  A positive value [+] indicates angles to the East or clockwise from
+    North; a negative value [-] indicates angles to the West or 
+    counter-clockwise from North.
+</dd>
+<br>
+
+<dt>
+<a NAME="sun_elevation"></a><b>Sun Elevation</b>
+</dt>
+<dd>
+<i>Definition:</i> Elevation is the angle of vertical deviation, measured
+    clockwise, of a bearing from a standard direction.</dd>
+</dd>
+<br>
+<dd>
+<i>Valid values:</i> -90.000000 through +90.000000 degrees
+</dd>
+<br>
+<dd>
+Note:  A positive value [+] indicates a daytime scene;
+    a negative value [-] indicates a nighttime scene.
+</dd>
+<br>
+
+<dt>
+<a NAME="std_l1_process_level"></a><b>Standard L1 Processing Level</b>
+</dt>
+<dd>
+<i>Definition:</i>The level of processing to create the level 1 product
+</dd>
+<br>
+<dd>
+<i>Valid values:</i> L1Gst
+</dd>
+<br>
+
+
+</dl>
+</body>
+</html>
+

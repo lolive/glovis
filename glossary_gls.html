@@ -1,0 +1,542 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Content-Language" content="en-us">
+   <meta charset="UTF-8">
+<title>USGS Global Visualization Viewer Metadata Glossary</title>
+<link rel="stylesheet" href="../includes/glovis.css" type="text/css">
+<meta name="description" content="USGS Global Visualization">
+<meta name="keywords" content="Global Visualization, EROS, Imagery,
+    Browse Images, Satellite, Satellite Data, World">
+<meta name="publisher" content="USGS - US Geological Survey, EROS">
+<meta name="abstract" content=" ">
+</head>
+<body bgcolor="#FFFFFF">
+<!--#include virtual="/includes/header_glovisb2.html" -->
+<br>
+<br>
+<font class="glovistitle2">USGS Global Visualization Viewer Metadata Glossary:
+Global Land Survey (GLS)/Landsat Level 1</font>
+
+<hr>
+<blockquote>
+<table width="100%">
+<tr valign=TOP>
+<td>
+<li><a href="#entity_id">Entity ID</a></li>
+<li><a href="#scene_size">Scene Size</a></li>
+<li><a href="#acquisition_date">Acquisition Date</a></li>
+<li><a href="#wrs-2_path">WRS-2 Path</a></li>
+<li><a href="#wrs-2_row">WRS-2 Row</a></li>
+<li><a href="#zone">Zone</a></li>
+<li><a href="#upper_left_corner">Upper Left Corner</a></li>
+</td>
+
+<td>
+<li><a href="#upper_right_corner">Upper Right Corner</a></li>
+<li><a href="#lower_left_corner">Lower Left Corner</a></li>
+<li><a href="#lower_right_corner">Lower Right Corner</a></li>
+<li><a href="#scene_center">Scene Center</a></li>
+<li><a href="#qa_percent_missing_data">QA Percent Missing Data</a></li>
+<li><a href="#sun_azimuth">Sun Azimuth</a></li>
+<li><a href="#sun_elevation">Sun Elevation</a></li>
+</td>
+
+<td>
+<li><a href="#satellite_number">Satellite Number</a></li>
+<li><a href="#orientation">Orientation</a></li>
+<li><a href="#product_type">Product Type</a></li>
+<li><a href="#resampling_technique">Resampling Technique</a></li>
+<li><a href="#datum">Datum</a></li>
+<li><a href="#gap-fill_percent">Gap-Fill Percent</a></li>
+<li><a href="#gap-fill_acquisition_date(s)">Gap-Fill Acquisition Date(s)</a></li>
+</td>
+</tr>
+</table>
+</blockquote>
+
+<dl>
+<dt><a NAME="entity_id"></a><b>Entity ID</b></dt>
+<dd><i>Definition:</i> This field uniquely identifies the scene.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format (GLS2010 and GLS2005): LXSPPPRRR#YYYYJJJGGGVV</dt>
+    <dd>
+    <table>
+        <tr VALIGN=TOP>
+            <td>L</td>
+            <td>Landsat</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>X</td>
+            <td>Sensor
+                <dt>E = ETM+</dt>
+                <dt>T = TM</dt>
+            </td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>S</td>
+            <td>Satellite number
+                <dt>7 = Landsat 7</dt>
+                <dt>5 = Landsat 5</dt>
+            </td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>PPP</td>
+            <td>Path (WRS-2)</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>RRR</td>
+            <td>Row (WRS-2)</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>#</td>
+            <td>Used to make ID unique when duplicate scenes are received from multiple receiving stations. (number increments each time the same scene is received from a different receiving station. 0 = first scene)</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>YYYY</td>
+            <td>Year of acquisition</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>JJJ</td>
+            <td>Julian day of acquisition</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>GGG</td>
+            <td>Ground Station (Receiving Station) Identifier</td>
+        </tr>
+        <tr VALIGN=TOP>
+            <td>VV</td>
+            <td>Version number reflecting how many times the scene was re-processed (0 = first time processed, 1 = scene re-processed once, etc.)</td>
+        </tr>
+    </table>
+    </dd>
+    <br>&nbsp;
+    <dt>Format (GLS2005 and GLS2010 Islands - EO-1):
+        EO1SPPPRRRYYYYDDDXXXML_GGG_VV</dt>
+    <dd>
+    <table width="100%">
+    <tr VALIGN=TOP>
+        <td>EO1</td>
+        <td>Satellite</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>S</td>
+        <td>Sensor (H=Hyperion, A=ALI)</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>PPP</td>
+        <td>Target WRS Path</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>RRR</td>
+        <td>Target WRS Row</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>YYYY</td>
+        <td>Year of acquisition</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>DDD</td>
+        <td>Day of the year of acquisition</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>X</td>
+        <td>(0=off; 1=on) Hyperion</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>X</td>
+        <td>(0=off; 1=on) ALI</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>X</td>
+        <td>(0=off; 1=on) AC</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>M</td>
+        <td>Pointing Mode
+            (N=Nadir, P=Pointed within path/row, K=Pointed outside path/row)
+        </td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>L</td>
+        <td>Scene Length
+            (F=Full scene, P=Partial scene, Q=Second partial scene, S=Swath)
+        </td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>GGG</td>
+        <td>Ground/Receiving Station</td>
+    </tr>
+    <tr VALIGN=TOP>
+        <td>VV</td>
+        <td>Version Number</td>
+    </tr>
+    </table>
+    </dd>
+    <br>&nbsp;
+    <dt>Format (GLS2000): PpppRrrr_SXYYYYMMDD</dt>
+    <dd>
+    <table>
+        <tr VALIGN=TOP>
+        <td>ppp</td>
+        <td>Path (WRS-2)</td>
+        </tr>
+        <tr VALIGN=TOP>
+        <td>rrr</td>
+        <td>Row (WRS-2)</td>
+        </tr>
+        <tr VALIGN=TOP>
+        <td>S</td>
+        <td>Satellite number
+                <dt>7 = Landsat 7</dt>
+        </tr>
+        <tr VALIGN=TOP>
+        <tr VALIGN=TOP>
+        <td>X</td>
+        <td>Reserved space for future use</td>
+        </tr>
+        <tr VALIGN=TOP>
+        <td>YYYY</td>
+        <td>Year of acquisition</td>
+        </tr>
+        <tr VALIGN=TOP>
+        <td>MM</td>
+        <td>Month of acquisition</td>
+        </tr>
+        <tr VALIGN=TOP>
+        <td>DD</td>
+        <td>Day of acquisition</td>
+        </tr>
+    </table>
+    </dd>
+    <br>&nbsp;
+    <dt>Format (Systematic L1G): L71ppprrr_rrrYYYYMMDD</dt>
+    <dd>
+    </dd>
+    <table>
+        <tr VALIGN=TOP>
+        <td>S</td>
+        <td>Satellite number
+                <dt>L7 = Landsat 7</dt>
+        </tr>
+        <tr VALIGN=TOP>
+        <td>1</td>
+        <td>Processing level
+                <dt>1 = Level 1</dt>
+        </tr>
+        <tr VALIGN=TOP>
+        <td>ppp</td>
+        <td>Path (WRS-2)</td>
+        </tr>
+        <tr VALIGN=TOP>
+        <td>rrr_rrr</td>
+        <td>Row (WRS-2) (starting row to ending row, always the same)</td>
+        </tr>
+        <tr VALIGN=TOP>
+        <td>YYYY</td>
+        <td>Year of acquisition</td>
+        </tr>
+        <tr VALIGN=TOP>
+        <td>MM</td>
+        <td>Month of acquisition</td>
+        </tr>
+        <tr VALIGN=TOP>
+        <td>DD</td>
+        <td>Day of acquisition</td>
+        </tr>
+    </table>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="scene_size"></a><b>Scene Size</b></dt>
+<dd><i>Definition:</i> The size of all files associated with the scene,
+in bytes.</dd>
+</dl>
+
+<dl>
+<dt><a NAME="acquisition_date"></a><b>Acquisition Date</b></dt>
+<dd><i>Definition:</i> The date the image was acquired.</dd>
+<br>&nbsp;
+<dd>
+    <dl>
+    <dd>Format: YYYY/MONTH/DD</dd>
+    </dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="wrs-2_path"></a><b>WRS-2 Path</b></dt>
+<dd><i>Definition:</i> The WRS-2 Path number associated with the scene.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Valid Values:</dt>
+    <dd>001 through 233</dd>
+</dl>
+<p>The Path is the WRS-2 path into which the scene falls. Sequential
+numbers from east to west are assigned to 233 nominal satellite tracks. Path
+numbers can be used with Row numbers to designate a geographic search for a
+nominal scene center.<p>
+The consistency and repeatability of the path for each satellite provides
+a common reference for all scenes acquired.
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="wrs-2_row"></a><b>WRS-2 Row</b></dt>
+<dd><i>Definition:</i> The WRS-2 Row number associated with the scene.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Valid Values:</dt>
+    <dd>001 through 124</dd>
+</dl>
+<p>The Row is the WRS-2 row into which the scene falls. This nominal
+configuration begins with row 1 at North 80 degrees 47 minutes and ends
+at row 124 at South 81 degrees 51 minutes for daylight acquisitions. Row
+60 corresponds with the equator at 0 degrees latitude.</dd><br>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="zone"></a><b>Zone</b></dt>
+<dd><i>Definition:</i> The UTM zone number associated with the image.</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="upper_left_corner"></a><b>Upper Left Corner</b></dt>
+<dd><i>Definition:</i> Scene upper left corner latitude and longitude.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format: DDD&deg;MM'SS&quot;H</dt>
+    <dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for
+    Longitude)</dd>
+    <dd>MM = Minutes (Valid values: 0-59)</dd>
+    <dd>SS = Seconds (Valid values: 0-59)</dd>
+    <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for
+    Longitude)</dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="upper_right_corner"></a><b>Upper Right Corner</b></dt>
+<dd><i>Definition:</i> Scene upper right corner latitude and longitude.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format: DDD&deg;MM'SS&quot;H</dt>
+    <dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for
+    Longitude)</dd>
+    <dd>MM = Minutes (Valid values: 0-59)</dd>
+    <dd>SS = Seconds (Valid values: 0-59)</dd>
+    <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for
+    Longitude)</dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="lower_left_corner"></a><b>Lower Left Corner</b></dt>
+<dd><i>Definition:</i> Scene lower left corner latitude and longitude.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format: DDD&deg;MM'SS&quot;H</dt>
+    <dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for
+    Longitude)</dd>
+    <dd>MM = Minutes (Valid values: 0-59)</dd>
+    <dd>SS = Seconds (Valid values: 0-59)</dd>
+    <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for
+    Longitude)</dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="lower_right_corner"></a><b>Lower Right Corner</b></dt>
+<dd><i>Definition:</i> Scene lower right corner latitude and longitude.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format: DDD&deg;MM'SS&quot;H</dt>
+    <dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for
+    Longitude)</dd>
+    <dd>MM = Minutes (Valid values: 0-59)</dd>
+    <dd>SS = Seconds (Valid values: 0-59)</dd>
+    <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for
+    Longitude)</dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="scene_center"></a><b>Scene Center</b></dt>
+<dd><i>Definition:</i> WRS-2 Scene Center Latitude/Longitude.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format: DDD&deg;MM'SS&quot;H</dt>
+    <dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for
+    Longitude)</dd>
+    <dd>MM = Minutes (Valid values: 0-59)</dd>
+    <dd>SS = Seconds (Valid values: 0-59)</dd>
+    <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for
+    Longitude)</dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="qa_percent_missing_data"></a><b>QA Percent Missing Data</b></dt>
+<dd><i>Definition:</i> Estimated percentage of scene missing or unusable</dd>
+<br>&nbsp;
+<dl>
+    <dt>Valid Values:</dt>
+    <dd>0-100</dd>
+</dl>
+</dl>
+
+
+<dl>
+<dt><a NAME="sun_azimuth"></a><b>Sun Azimuth</b></dt>
+<dd><i>Definition:</i> Azimuth is the angle of horizontal deviation,
+measured clockwise, of a bearing from the north.</dd>
+<br>&nbsp;
+<dl>
+    <dt>Valid Values:</dt>
+    <dd>-180.000000 through +180.000000 degrees (with 7-digit precision)</dd>
+</dl>
+<p>A positive value [+] indicates angles to the East or clockwise from North;
+a negative value [-] indicates angles to the West or counter-clockwise from
+North.
+</dl>
+
+
+<dl>
+<dt><a NAME="sun_elevation"></a><b>Sun Elevation</b></dt>
+<dd><i>Definition:</i> Elevation is the angle of vertical deviation from
+the tangent to the earth's surface (at scene center point) to the line
+between the sun's center and the scene center point.</dd>
+<br>&nbsp;
+<dl>
+    <dt>Valid Values:</dt>
+    <dd>-90.000000 through +90.000000 degrees (with a 7-digit precision)</dd>
+</dl>
+<p>NOTE: The solar zenith angle will be 90 degrees minus the solar elevation
+angle.
+</dl>
+
+
+<dl>
+<dt><a NAME="satellite_number"></a><b>Satellite Number</b></dt>
+<dd><i>Definition:</i> The satellite which acquired the data.</dd>
+<br>&nbsp;
+<dl>
+    <dt>Valid Codes:</dt>
+    <dd>Landsat7 = Landsat 7</dd>
+    <dd>Landsat5 = Landsat 5</dd>
+</dl>
+</dl>
+
+
+<dl>
+<dt><a NAME="orientation"></a><b>Orientation</b></dt>
+<dd><i>Definition:</i> The orientation of the image.</dd>
+<br>&nbsp;
+<dl>
+    <dt>Valid Code:</dt>
+    <dd>NUP (North Up)</dd>
+</dl>
+</dl>
+
+
+<dl>
+<dt><a NAME="product_type"></a><b>Product Type</b></dt>
+<dd><i>Definition:</i> The product type, processing level, of the image.</dd>
+<br>&nbsp;
+<dl>
+    <dt>Valid Codes:</dt>
+    <dl>
+    <dt>L1Gt = Systematic Terrain Correction (Level 1Gt)</dt>
+    <dd>The Level 1Gt (L1Gt)
+        data product provides systematic radiometric and geometric accuracy,
+        while also employing a Digital Elevation Model (DEM) for topographic
+        accuracy.</dd>
+    <dt>L1T = Terrain Correction (Level 1T)</dt>
+    <dd>The Level 1T (L1T) data product
+        provides systematic radiometric and geometric accuracy by
+        incorporating ground control points, while also employing a
+        Digital Elevation Model (DEM) for topographic accuracy. Geodetic
+        accuracy of the product depends on the accuracy of the ground
+        control points and the resolution of the DEM used.</dd>
+    </dl>
+</dl>
+</dl>
+
+
+<dl>
+<dt><a NAME="resampling_technique"></a><b>Resampling Technique</b></dt>
+<dd><i>Definition:</i> The resampling applied to the scene.</dd>
+<br>&nbsp;
+<dl>
+    <dt>Valid Codes:</dt>
+    <dd>CC = Cubic Convolution</dd>
+    <dd>NN = Nearest Neighbor</dd>
+</dl>
+</dl>
+
+
+<dl>
+<dt><a NAME="datum"></a><b>Datum</b></dt>
+<dd><i>Definition:</i> The datum associated with the image.</dd>
+<br>&nbsp;
+<dl>
+    <dt>Valid Code:</dt>
+    <dd>WGS 84 = Worldgeodetic System 1984</dd>
+</dl>
+</dl>
+
+
+<dl>
+<dt><a NAME="gap-fill_percent"></a><b>Gap-Fill Percent</b></dt>
+<dd><i>Definition:</i> Percentage of image pixels present after gap-filling.</dd>
+<br>&nbsp;
+<dl>
+    <dt>Valid Values:</dt>
+    <dd>0-99.9 or Not Applicable</dd>
+</dl>
+</dl>
+
+
+<dl>
+<dt><a NAME="gap-fill_acquisition_date(s)"></a><b>Gap-Fill Acquisition Date(s)</b></dt>
+<dd><i>Definition:</i> Acquisition date of input scenes used for scan gap fill - up to five input scenes - included only for gap-filled products.</dd>
+<br>&nbsp;
+<dd>
+    <dl>
+    <dd>Format: (YYYY-MONTH-DD) or Not Applicable</dd>
+    </dl>
+</dd>
+</dl>
+
+
+</body>
+</html>

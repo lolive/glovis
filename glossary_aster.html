@@ -1,0 +1,458 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Content-Language" content="en-us">
+   <meta charset="UTF-8">
+<title>USGS Global Visualization Viewer Metadata Glossary</title>
+<link rel="stylesheet" href="../includes/glovis.css" type="text/css">
+<meta name="description" content="USGS Global Visualization">
+<meta name="keywords" content="Global Visualization, EROS, Imagery,
+    Browse Images, Satellite, Aster, Satellite Data, World">
+<META name="publisher" content="USGS - US Geological Survey, EROS">
+<META name="abstract" content=" ">
+</head>
+<body bgcolor="#FFFFFF">
+<!--#include virtual="/includes/header_glovisb2.html" -->
+<br />
+<br />
+<font class="glovistitle2">USGS Global Visualization Viewer Metadata Glossary:
+ASTER</font>
+
+<hr />
+<blockquote>
+<table width="100%">
+<tr valign=TOP>
+<td>
+<li><a href="#l1a_scene_id">Level 1A Scene ID</a></li>
+<li><a href="#l1b_scene_id">Level 1B Scene ID</a></li>
+<li><a href="#acquisition_date">Acquisition Date</a></li>
+<li><a href="#wrs_path">WRS-2 Path</a></li>
+<li><a href="#wrs_row">WRS-2 Row</a></li>
+<li><a href="#ul_corner_lat">Upper Left Corner</a></li>
+<li><a href="#ur_corner_lat">Upper Right Corner</a></li>
+<li><a href="#ll_corner_lat">Lower Left Corner</a></li>
+</td>
+
+<td>
+<li><a href="#lr_corner_lat">Lower Right Corner</a></li>
+<li><a href="#scene_center_lat">Scene Center</a></li>
+<li><a href="#cloud_cover">Scene Cloud Cover</a></li>
+<li><a href="#swir_mode">SWIR Mode</a></li>
+<li><a href="#tir_mode">TIR Mode</a></li>
+<li><a href="#vnir1_mode">VNIR1 Mode</a></li>
+<li><a href="#vnir2_mode">VNIR2 Mode</a></li>
+</td>
+
+<td>
+
+<li><a href="#day_night">Day or Night</a></li>
+<li><a href="#orbit_dir">Orbital Direction</a></li>
+<li><a href="#sun_elevation">Sun Elevation</a></li>
+<li><a href="#sun_azimuth">Sun Azimuth</a></li>
+<li><a href="#acq_time">Acquisition Time</a></li>
+<li><a href="#pangle">VNIR,TIR or SWIR Pointing Angle</a></li>
+<li><a href="#aster_granule_id">ASTER Granule ID</a></li>
+<li><a href="#aster_processing_center">ASTER Processing Center</a></li>
+</td>
+</tr>
+</table>
+</blockquote>
+
+<dl>
+
+<dt>
+<a NAME="l1a_scene_id"></a><b>L1A Scene ID</b>,
+<a NAME="l1b_scene_id"></a><b>L1B Scene ID</b></dt>
+
+<dd>
+<i>Definition:</i> This field is the DAAC Level 1A or Level 1B scene ID. It
+uniquely identifies the scene for ordering it from the DAAC.</dd>
+
+<br />&nbsp;
+<dl>
+<dt>
+Format: SC:AST_L1A.VVV:XXXXXXXXXX</dt>
+<dd>
+<table>
+<tr VALIGN=TOP>
+<td>VVV</td>
+<td>Database version</td>
+</tr>
+<tr>
+<td>XXXXXXXXXX</td>
+<td>Unique database ID for the specified version</td>
+</tr>
+</table>
+</dd>
+</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="acquisition_date"></a><b>Acquisition Date</b>
+</dt>
+
+<dd>
+<i>Definition:</i> The date the image was acquired.</dd>
+<br />&nbsp;
+<dl>
+<dt>
+Format: YYYY/MM/DD</dt>
+</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="wrs_path"></a><b>WRS-2 Path</b></dt>
+<dd>
+<i>Definition:</i> The WRS-2 Path number associated with the
+scene.</dd>
+<br />&nbsp;
+<dl>
+<dt>
+Valid Values:</dt>
+<dd>
+001 through 233</dd>
+</dl>
+<dd>The Path is the WRS-2 path into which the ASTER scene falls. Sequential
+numbers from east to west are assigned to 233 nominal satellite tracks. Path
+numbers can be used with Row numbers to designate a geographic search for a
+nominal scene center.<p>
+The consistency and repeatability of the path for each satellite provides
+a common reference for all scenes acquired.<p>
+Note: The ASTER scene centers do not exactly follow a WRS-2 layout. The Global
+Visualization Viewer uses the WRS-2 Path/Row for data organization.
+</dd><br />
+
+<br />&nbsp;
+<dt>
+<a NAME="wrs_row"></a><b>WRS-2 Row</b></dt>
+
+<dd>
+<i>Definition:</i> The WRS-2 Row number associated with the
+scene.</dd>
+
+<br />&nbsp;
+<dl>
+<dt>
+Valid Values:</dt>
+<dd>
+001 through 248</dd>
+</dl>
+<dd>The Row is the WRS-2 row into which the ASTER scene falls. This nominal
+configuration begins with row 1 at North 80 degrees 47 minutes and ends
+at row 122 at South 81 degrees 51 minutes for daylight acquisitions. Row
+60 corresponds with the equator at 0 degrees latitude. There is a total of
+248 rows. Rows 123-248 are associated with night acquisitions.<p>
+Note: The ASTER scene centers do not exactly follow a WRS-2 layout. The Global
+Visualization Viewer uses the WRS-2 Path/Row for data organization.
+</dd><br />
+
+<br />&nbsp;
+<dt>
+<a NAME="ul_corner_lat"></a><b>Upper Left Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Scene upper left corner latitude and longitude.</dd>
+
+<br />&nbsp;
+<dl>
+<dt>
+Format: DDD&deg;MM'SS&quot;H</dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="ur_corner_lat"></a><b>Upper Right Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Scene upper right corner latitude and longitude.</dd>
+
+<br />&nbsp;
+<dl>
+<dt>
+Format: DDD&deg;MM'SS&quot;H</dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="ll_corner_lat"></a><b>Lower Left Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Scene lower left corner latitude and longitude.</dd>
+
+<br />&nbsp;
+<dl>
+<dt>
+Format: DDD&deg;MM'SS&quot;H</dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="lr_corner_lat"></a><b>Lower Right Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Scene lower right corner latitude and longitude.</dd>
+
+<br />&nbsp;
+<dl>
+<dt>
+Format: DDD&deg;MM'SS&quot;H</dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="scene_center_lat"></a><b>Scene Center</b></dt>
+
+<dd>
+<i>Definition:</i> WRS-2 Scene Center Latitude/Longitude - DAAC calculated
+coordinate value.</dd>
+
+<br />&nbsp;
+<dl>
+<dt>
+Format: DDD&deg;MM'SS&quot;H</dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="cloud_cover"></a><b>Scene Cloud Cover</b></dt>
+<dd>
+<i>Definition:</i>The Scene Cloud Cover is the percentage of a scene that is
+obscured by clouds and is the average of all four quadrant cloud cover values.
+Users are encouraged to preview browses prior to ordering data products to
+confirm acceptable cloud cover impacts.</dd><br />
+
+
+<br />&nbsp;
+<dt>
+<a NAME="swir_mode"></a><b>SWIR Mode</b></dt>
+<dd>
+<i>Definition:</i> This flag indicates whether or not the shortwave-infrared
+sensor collected data for this scene.</dd>
+<br />&nbsp;
+<dl>
+<dt>
+Valid Codes:</dt>
+<dd>
+On</dd>
+<dd>
+Off</dd>
+<br />Note: Browse imagery <i>is not</i>&nbsp;available in the Global
+Visualization Viewer.</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="tir_mode"></a><b>TIR Mode</b></dt>
+<dd>
+<i>Definition:</i> This flag indicates whether or not the thermal-infrared
+sensor collected data for this scene.</dd>
+<br />&nbsp;
+<dl>
+<dt>
+Valid Codes:</dt>
+<dd>
+On</dd>
+<dd>
+Off</dd>
+<br />Note: Browse imagery <i>is not</i>&nbsp;available in the Global
+Visualization Viewer.</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="vnir1_mode"></a><b>VNIR1 Mode</b></dt>
+<dd>
+<i>Definition:</i> This flag indicates whether or not the visible,
+near-infrared sensor for telescope #1 collected data for this scene.</dd>
+<br />&nbsp;
+<dl>
+<dt>
+Valid Codes:</dt>
+<dd>
+On</dd>
+<dd>
+Off</dd>
+<br />Note: Browse imagery <i>is</i>&nbsp; available in the Global Visualization
+Viewer. The single set of browse images in the Global Visualization Viewer is an
+integration of the VNIR1 and VNIR2 scenes.</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="vnir2_mode"></a><b>VNIR2 Mode</b></dt>
+<dd>
+<i>Definition:</i> This flag indicates whether or not the visible,
+near-infrared sensor for telescope #2 collected data for this scene.</dd>
+<br />&nbsp;
+<dl>
+<dt>
+Valid Codes:</dt>
+<dd>
+On</dd>
+<dd>
+Off</dd>
+<br />Note: Browse imagery <i>is</i>&nbsp;available in the Global Visualization
+Viewer. The single set of browse images in the Global Visualization Viewer is an
+integration of the VNIR1 and VNIR2 scenes.</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="day_night"></a><b>Day or Night</b></dt>
+<dd>
+<i>Definition:</i> This field indicates whether the scene was collected during 
+the day or night. If a collected scene crosses the sun terminator line, it is 
+declared as "Both".</dd>
+<br />&nbsp;
+<dl>
+<dt>Valid Codes:</dt>
+<dd>
+Day</dd>
+<dd>
+Night</dd>
+<dd>
+Both</dd>
+</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="orbit_dir"></a><b>Orbital Direction</b></dt>
+<dd>
+<i>Definition:</i> This field indicates the orbital direction for the scene
+when the data was acquired. Terra is a sun-synchronous orbit, crossing the
+equator at about 10:30 AM (GMT). This renders day-time orbits to be descending
+passes while night-time orbits are ascending passes.</dd>
+<br />&nbsp;
+<dl>
+<dt>Valid Codes:</dt>
+<dd>
+Ascending</dd>
+<dd>
+Descending</dd>
+</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="sun_elevation"></a><b>Sun Elevation</b></dt>
+
+<dd>
+<i>Definition:</i> Elevation is the angle of vertical deviation,
+measured clockwise, of a bearing from a standard direction.</dd>
+
+<br />&nbsp;
+<dl>
+<dt>
+Valid Values:</dt>
+<dd>
+-90.000000 through +90.000000 degrees</dd>
+
+<br />Note: A positive value [+] indicates a daytime scene;
+a negative value [-] indicates a nighttime scene.&nbsp;
+</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="sun_azimuth"></a><b>Sun Azimuth</b></dt>
+
+<dd>
+<i>Definition:</i> Azimuth is the angle of horizontal deviation,
+measured clockwise, of a bearing from a standard direction.</dd>
+
+<br />&nbsp;
+<dl>
+<dt>
+Valid Values:</dt>
+
+<dd>
+-180.000000 through +180.000000 degrees</dd>
+
+<br />Note: A positive value [+] indicates angles to the East or
+clockwise from North; a negative value [-] indicates angles to the West or
+counter-clockwise from North.&nbsp;
+</dl>
+
+
+<br />&nbsp;
+<dt>
+<a NAME="acq_time"></a><b>Acquisition Time</b></dt>
+<dd>
+<i>Definition:</i> The hour, minute, and second at which the satellite collected
+the data for the scene.</dd>
+<br />&nbsp;
+<dl>
+Format: HH:MM:SS
+<dd>
+<table>
+<tr>
+<td>HH = hours (00-23)</td>
+</tr>
+<tr>
+<td>MM = minutes (00-59)</td>
+</tr>
+<tr>
+<td>SS = second (00-59)</td>
+</tr>
+</table>
+</dd>
+</dl>
+
+
+<br />
+<dt>
+<a NAME="pangle"></a><b>VNIR, TIR or SWIR Pointing Angle</b></dt>
+
+<dd>
+<i>Definition:</i> The VNIR, TIR or SWIR sensor pointing angle in degrees from
+nadir.
+</dd>
+
+<br />
+<dt>
+<a NAME="aster_granule_id"></a><b>ASTER Granule ID</b></dt>
+
+<dd>
+<i>Definition:</i> Granule ID assigned by the Japanese acquisition system.
+</dd>
+
+<br />
+<dt>
+<a NAME="aster_processing_center"></a><b>ASTER Processing Center</b></dt>
+
+<dd>
+<i>Definition:</i> Center that processed the granule.
+</dd>
+
+</body>
+</html>

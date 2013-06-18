@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Content-Language" content="en-us">
+   <meta charset="UTF-8">
+<title>USGS Global Visualization Viewer Metadata Glossary</title>
+<link rel="stylesheet" href="../includes/glovis.css" type="text/css">
+<meta name="description" content="USGS Global Visualization">
+<meta name="keywords" content="Global Visualization, EROS, Imagery,
+    Browse Images, Satellite, Aster, Satellite Data, World">
+<meta name="publisher" content="USGS - US Geological Survey, EROS">
+<meta name="abstract" content=" ">
+</head>
+<body bgcolor="#FFFFFF">
+<!--#include virtual="/includes/header_glovisb2.html" -->
+<br>
+<div class="glovistitle2">USGS Global Visualization Viewer Metadata Glossary:
+NAPP</div>
+
+<div id="dictionary_contents" name="dictionary_contents">
+<table width="100%">
+<tr valign=TOP>
+<td>
+<ul class="c2">
+    <li><a href="#project_name">Project Name</a></li>
+    <li><a href="#roll_number">Roll Number</a></li>
+    <li><a href="#frame_number">Frame Number</a></li>
+    <li><a href="#acquisition_date">Acquisition Date</a></li>
+    <li><a href="#film_type">Film Type</a></li>
+    <li><a href="#flight_line">Flight Line</a></li>
+    <li><a href="#station">Station</a></li>
+</ul>
+</td>
+<td>
+<ul class="c2">
+    <li><a href="#ul_corner_lat">Upper Left Corner</a></li>
+    <li><a href="#ur_corner_lat">Upper Right Corner</a></li>
+    <li><a href="#ll_corner_lat">Lower Left Corner</a></li>
+    <li><a href="#lr_corner_lat">Lower Right Corner</a></li>
+    <li><a href="#scene_center_lat">Scene Center</a></li>
+    <li><a href="#county">County</a></li>
+    <li><a href="#state">State</a></li>
+</ul>
+</td>
+<td>
+<ul class="c2">
+    <li><a href="#camera">Camera</a></li>
+    <li><a href="#calibrated_focal_length">Calibrated Focal Length</a></li>
+    <li><a href="#lens">Lens</a></li>
+    <li><a href="#project_number">Project Number</a></li>
+    <li><a href="#entity_id">Entity Id</a></li>
+    <li><a href="#product_available">Product Available</a></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+
+<div class="glovis_dictionary">
+<dl>
+
+<dt><a NAME="project_name"></a>Project Name</dt>
+<dd class="definition">
+Name used to uniquely identify a project.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Valid codes include:</dt>
+  <dd>NAPP = CIR film</dd>
+  <dd>NAPPA = Duplicate B&amp;W film, covering limited area</dd>
+  <dd>NAPPW = B&amp;W film</dd>
+</dl>
+</dd>
+
+<dt><a NAME="roll_number"></a>Roll Number</dt>
+<dd class="definition">
+The number assigned to a roll of film.
+</dd>
+
+<dt><a NAME="frame_number"></a>Frame Number</dt>
+<dd class="definition">
+A number that indicates an image position on a roll of film.
+</dd>
+
+<dt><a NAME="acquisition_date"></a>Acquisition Date</dt>
+<dd class="definition">
+This will reflect the first date of the collection period 
+    (8-day or 16-day) if a composite granule. Otherwise, will reflect the 
+    calendar date of acquisition for a daily granule.
+</dd>
+<dd>
+<em>NOTE: </em>May not agree with "Range Beginning Date", which reflects the 
+    first date within a collection period that data meeting minimum quality 
+    standards was acquired.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>YYYY/MM/DD</dd>
+</dl>
+</dd>
+
+<dt><a NAME="film_type"></a>Film Type</dt>
+<dd class="definition">
+Aerial film type used for aerial mapping.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Valid Codes:</dt>
+  <dd>B&amp;W = Black-and-white</dd>
+  <dd>CIR = Color Infrared</dd>
+</dl>
+</dd>
+
+<dt><a NAME="flight_line"></a>Flight Line</dt>
+<dd class="definition">
+Flight Line and Station numbers indicate the positions 
+    upon which  NAPP photographs are centered. These positions are based 
+    on specific locations within the boundaries of associated 7.5-minute 
+    topographic map quads.<br>
+    Basically, the flight line number consists of a longitude degree 
+    coordinate, the position of the associated 7.5-minute quad, and "E"
+    or "W" which indicates whether the flight line is to the east or 
+    west of the center of the quad.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format Example: Flight Line Number: 0998W</dt>
+  <dd>099 = Longitude degree coordinate</dd>
+  <dd>8 = Location of the quad in relation to the positions of the eight quads
+      in a degree of longiitude</dd>
+  <dd>W = Indicates whether the flight line is to east or west of the center 
+      of the quad</dd>
+</dl>
+</dd>
+
+<dt> <a NAME="station"></a>Station</dt>
+<dd class="definition">
+Station is a number relative to the flight line. It 
+    occupies a specific position within the 7.5-minute quad(s) ascending 
+    to the north beginning with the lowest latitude of the U.S., meaning 
+    the lowest numbers would be in Florida and the highest numbers would 
+    be in Maine.
+</dd>
+
+<dt> <a NAME="ul_corner_lat"></a>Upper Left Corner</dt> 
+<dd class="definition">
+Product tile upper left corner latitude and longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>DDD&deg;MM'SS&quot;H</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>DDD = Degrees (Valid values: 24-49N for Latitude, 66-126W for Longitude)</dd>
+  <dd>MM = Minutes (Valid values: 0-59)</dd>
+  <dd>SS = Seconds (Valid values: 0-59)</dd>
+  <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+</dd>
+
+<dt><a NAME="ur_corner_lat"></a>Upper Right Corner</dt>
+<dd class="definition">
+Product tile upper right corner latitude and longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>DDD&deg;MM'SS&quot;H</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>DDD = Degrees (Valid values: 24-49N for Latitude, 66-126W for Longitude)</dd>
+  <dd>MM = Minutes (Valid values: 0-59)</dd>
+  <dd>SS = Seconds (Valid values: 0-59)</dd>
+  <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+  </dd>
+</dl>
+</dd>
+
+<dt><a NAME="ll_corner_lat"></a>Lower Left Corner</dt>
+<dd class="definition">
+Product tile lower left corner latitude and longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>DDD&deg;MM'SS&quot;H</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>DDD = Degrees (Valid values: 24-49N for Latitude, 66-126W for Longitude)</dd>
+  <dd>MM = Minutes (Valid values: 0-59)</dd>
+  <dd>SS = Seconds (Valid values: 0-59)</dd>
+  <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+  </dd>
+</dl>
+</dd>
+
+<dt><a NAME="lr_corner_lat"></a>Lower Right Corner</dt>
+<dd class="definition">
+Product tile lower right corner latitude and longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>DDD&deg;MM'SS&quot;H</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>DDD = Degrees (Valid values: 24-49N for Latitude, 66-126W for Longitude)</dd>
+  <dd>MM = Minutes (Valid values: 0-59)</dd>
+  <dd>SS = Seconds (Valid values: 0-59)</dd>
+  <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+  </dd>
+</dl>
+</dd>
+
+<dt><a NAME="scene_center_lat"></a>Scene Center</dt>
+<dd class="definition">
+The latitude and longitude of the center point of the image.
+NAPP photographs are acquired over predetermined center points (center
+latitude and center longitude) which are defined by their location within
+a 7.5-minute quadrangle. The NAPP images are flown north to south or
+south to north.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>DDD&deg;MM'SS&quot;H</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>DDD = Degrees (Valid values: 24-49N for Latitude, 66-126W for Longitude)</dd>
+  <dd>MM = Minutes (Valid values: 0-59)</dd>
+  <dd>SS = Seconds (Valid values: 0-59)</dd>
+  <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+  </dd>
+</dl>
+</dd>
+
+<dt><a NAME="county"></a>County</dt>
+<dd class="definition">
+The county in which the photograph was acquired.
+</dd>
+
+<dt><a NAME="state"></a>State</dt>
+<dd class="definition">
+This field is used to identify the state in which the photograph was taken.
+</dd>
+
+<dt><a NAME="camera"></a>Camera</dt>
+<dd class="definition">
+The number assigned to an aerial photographic device 
+    composed of a lightproof enclosure having an aperture with a shuttered
+    lens through which the image of an object is focused and recorded on a
+    photosensitive film or plate.
+</dd>
+
+<dt><a NAME="calibrated_focal_length"></a>Calibrated Focal Length</dt>
+<dd class="definition">
+The distance measured along the lens axis from the rear 
+    nodal point to the imaging surface plane in millimeters.
+</dd>
+
+<dt><a NAME="lens"></a>Lens</dt>
+<dd class="definition">
+The lens is generally composed of multiple lens elements
+    that gather the light rays from a scene (frame) and bring them to 
+    focus in the focal plane.
+</dd>
+
+<dt><a NAME="project_number"></a>Project Number</dt>
+<dd class="definition">
+This field is used to identify the project number, which 
+    consists of the contract year and the sequential number of the 
+    contracted area.
+</dd>
+
+<dt><a NAME="entity_id"></a>Entity ID</dt>
+<dd class="definition">
+This field is used to identify data by assigning a unique series
+of letters and numbers to an image.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format</dt>
+  <dd>DDPPPPPPRRRRRFFF</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>DD = Dataset Identifier</dd>
+  <dd>PPPPPP = Project Name</dd>
+  <dd>RRRRR = Roll Number *</dd>
+  <dd>FFF = Frame Number *</dd>
+</dl>
+<dl>
+  <dt>Format Example:</dt>
+  <dd>NP0NAPP001060121</dd>
+</dl>
+<dl>
+  <dd>NP = Dataset Identifier</dd>
+  <dd>0NAPP0 = Project Name</dd>
+  <dd>01060 = Roll Number *</dd>
+  <dd>121 = Frame Number *</dd>
+</dl>
+<dt></dt>
+<dd>* Depending upon the entity ID, some of the information may be preceded
+by zero-filled spaces.</dd>
+</dd>
+
+<dt><a NAME="product_available"></a>Product Available</dt>
+<dd class="definition">
+The products available for a digital photo.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Valid Values:</dt>
+  <dd>Medium Res and Scanned = Medium resolution digitized products and High 
+    Resolution scanned products are available </dd>
+  <dd>Medium-resolution digitized files are created at approximately 600 dpi
+    with an output image size of around five inches square. The file sizes 
+    are approximately 15 megabytes for black and white images and 45 megabytes
+    for color images.</dd>
+  <dd>Scanned only = Only high-resolution scanned products are available</dd>
+  <dd>High-resolution scanned files are created at approximately 1200 dpi 
+    with an output image size of around nine inches square. The file sizes
+    are approximately 120 megabytes for black and white images and 360 
+    megabytes for color images.</dd>
+</dl>
+</dd>
+
+</div>
+
+</body>
+</html>

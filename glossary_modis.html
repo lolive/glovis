@@ -1,0 +1,349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Content-Language" content="en-us">
+   <meta charset="UTF-8">
+<title>USGS Global Visualization Viewer Metadata Glossary</title>
+<link rel="stylesheet" href="../includes/glovis.css" type="text/css">
+<meta name="description" content="USGS Global Visualization">
+<meta name="keywords" content="Global Visualization, EROS, Imagery,
+    Browse Images, Satellite, Aster, Satellite Data, World">
+<meta name="publisher" content="USGS - US Geological Survey, EROS">
+<meta name="abstract" content=" ">
+</head>
+<body bgcolor="#FFFFFF">
+<!--#include virtual="/includes/header_glovisb2.html" -->
+<br>
+<br>
+<font class="glovistitle2">USGS Global Visualization Viewer Metadata Glossary:
+MODIS</font>
+
+<hr>
+<blockquote>
+<table width="100%">
+<tr valign=TOP>
+<td>
+    <li><a href="#local_granule_id">Local Gradule ID</a></li>
+    <li><a href="#acquisition_date">Acquisition Date</a></li>
+    <li><a href="#horizontal_tile">Horizontal Tile</a></li>
+    <li><a href="#vertical_tile">Vertical Tile</a></li>
+    <li><a href="#ul_corner_lat">Upper Left Corner</a></li>
+    <li><a href="#ur_corner_lat">Upper Right Corner</a></li>
+</td>
+<td>
+    <li><a href="#ll_corner_lat">Lower Left Corner</a></li>
+    <li><a href="#lr_corner_lat">Lower Right Corner</a></li>
+    <li><a href="#beginning_date">Range Beginning Date</a></li>
+    <li><a href="#ending_date">Range Ending Date</a></li>
+    <li><a href="#day_night">Day or Night</a></li>
+    <li><a href="#science_qlty">Science Quality</a></li>
+</td>
+<td>
+    <li><a href="#science_qlty_expl">Science Quality Explanation</a></li>
+    <li><a href="#automatic_qlty">Automatic Quality</a></li>
+    <li><a href="#automatic_qlty_expl">Automatic Quality Explanation</a></li>
+    <li><a href="#pge_version">PGE Version</a></li>
+    <li><a href="#missing_data">Percent Missing Data</a></li>
+    <li><a href="#cloud_cover">Cloud Cover</a></li>
+</td>
+</tr>
+</table>
+</blockquote>
+
+<dl>
+
+<dt>
+<a NAME="local_granule_id"></a><b>Local Granule ID</b></dt>
+
+<dd>
+<i>Definition:</i> The name of an individual file.</dd>
+<br>
+<dl>
+<dt>
+<i>Format Example:</i> MOD09A1.A2003045.h12v05.004.2003055191434.hdf</dt>
+<dd>
+<table width="40%">
+<tr VALIGN=TOP>
+    <td>MOD09A1</td>
+    <td>Short Name</td>
+</tr>
+<tr>
+    <td>A2003045</td>
+    <td>Acquisition Date</td>
+</tr>
+<tr>
+    <td>h12</td>
+    <td>Horizontal Tile</td>
+</tr>
+<tr>
+    <td>v05</td>
+    <td>Vertical Tile</td>
+</tr>
+<tr>
+    <td>004</td>
+    <td>Version</td>
+</tr>
+<tr>
+    <td>2003055191434</td>
+    <td>Production Date Time</td>
+</tr>
+<tr>
+    <td>.hdf</td>
+    <td>Format</td>
+</tr>
+
+</table>
+</dd>
+</dl>
+
+</dd>
+<br>
+<dt>
+<a NAME="acquisition_date"></a><b>Acquisition Date</b>
+</dt>
+
+<dd>
+<i>Definition:</i> This will reflect the first date of the collection period (8-day
+or 16-day) if a composite granule. Otherwise, will reflect the calendar date of
+acquisition for a daily granule.</dd>
+<br>
+<dd>
+<i>NOTE: </i>May not agree with "Range Beginning Date", which reflects the first date
+within a collection period that data meeting minimum quality standards was acquired.</dd>
+<br>
+<dl>
+<dt>
+<i>Format: </i>YYYY-MM-DD</dt>
+</dl>
+<br>
+<dt>
+<a NAME="horizontal_tile"></a><b>Horizontal Tile</b></dt>
+<dd>
+<i>Definition:</i> Horizontal tile number of the 10&deg X 10&deg MODIS grid the 
+granule is in, which increases from left to right.</dd>
+<br>
+<dl>
+<dt>
+<i>Valid Values:</i></dt>
+<dd>
+00 through 35</dd>
+</dl>
+
+<br>
+<dt>
+<a NAME="vertical_tile"></a><b>Vertical Tile</b></dt>
+<dd>
+<i>Definition:</i> Vertical tile number of the 10&deg X 10&deg MODIS grid the 
+granule is in, which increases from top to bottom.</dd>
+<br>
+<dl>
+<dt>
+<i>Valid Values:</i></dt>
+<dd>
+00 through 17</dd>
+</dl>
+
+<br>
+<dt>
+<a NAME="ul_corner_lat"></a><b>Upper Left Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Product tile upper left corner latitude and longitude.</dd>
+
+<br>
+<dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+</dd>
+
+
+<br>
+<dt>
+<a NAME="ur_corner_lat"></a><b>Upper Right Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Product tile upper right corner latitude and longitude.</dd>
+
+<br>
+<dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+</dd>
+
+
+<br>
+<dt>
+<a NAME="ll_corner_lat"></a><b>Lower Left Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Product tile lower left corner latitude and longitude.</dd>
+
+<br>
+<dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+</dd>
+
+
+<br>
+<dt>
+<a NAME="lr_corner_lat"></a><b>Lower Right Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Product tile lower right corner latitude and longitude.</dd>
+
+<br>
+<dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+</dd>
+
+<br>
+<dt>
+<a NAME="beginning_date"></a><b>Range Beginning Date</b>
+</dt>
+
+<dd>
+<i>Definition:</i> Actual start date of data acquisition.</dd>
+<br>
+<dl>
+<dt>
+<i>Format:</i> YYYY-MM-DD</dt>
+</dl>
+
+<br>
+<dt>
+<a NAME="ending_date"></a><b>Range Ending Date</b>
+</dt>
+
+<dd>
+<i>Definition:</i> Actual end date of data acquisition.</dd>
+<br>
+<dl>
+<dt>
+<i>Format:</i> YYYY-MM-DD</dt>
+</dl>
+
+<br>
+<dt>
+<a NAME="day_night"></a><b>Day or Night</b></dt>
+<dd>
+<i>Definition:</i> Indicates whether the data was collected during 
+the day or night. If a collected granule crosses the sun terminator line, it is 
+declared as "Both".</dd>
+<br>
+<dl>
+<dt><i>Valid Codes:</i></dt>
+<dd>
+Day</dd>
+<dd>
+Night</dd>
+<dd>
+Both</dd>
+</dl>
+
+<br>
+<dt>
+<a NAME="science_qlty"></a><b>Science Quality</b></dt>
+<dd>
+<i>Definition:</i> Description of the status of the file's science
+quality according to Science Team evaluation.</dd>
+<br>
+<dl>
+<dt><i>Valid Values:</i></dt>
+<dd>
+Passed</dd>
+<dd>
+Inferred Passed</dd>
+<dd>
+Failed</dd>
+<dd>
+Inferred Failed</dd>
+<dd>
+Suspect</dd>
+<dd>
+Being Investigated</dd>
+<dd>
+Not Investigated</dd>
+<dd>
+Hold</dd>
+</dl>
+
+<br>
+<dt>
+<a NAME="science_qlty_expl"></a><b>Science Quality Explanation</b></dt>
+<dd>
+<i>Definition:</i> Description of the context in which a Science Quality Flag
+was assigned. <br>&nbsp;</dd>
+
+<dt>
+<a NAME="automatic_qlty"></a><b>Automatic Quality</b></dt>
+<dd>
+<i>Definition:</i> Indicates whether or not the file was
+output properly from the production software.</dd>
+<br>
+<dl>
+<dt><i>Valid Values:</i></dt>
+<dd>
+Passed</dd>
+<dd>
+Failed</dd>
+<dd>
+</dl>
+
+<br>
+<dt>
+<a NAME="automatic_qlty_expl"></a><b>Automatic Quality Explanation</b></dt>
+<dd>
+<i>Definition:</i> Description of the context in which an Automatic Quality Flag
+was assigned. <br>&nbsp;</dd>
+
+<dt>
+<a NAME="pge_version"></a><b>PGE Version</b></dt>
+<dd>
+<i>Definition:</i> Version number of the Product Generation Algorithm 
+used to create the file. <br>&nbsp;</dd>
+
+<dt>
+<a NAME="missing_data"></a><b>Percent Missing Data</b>
+</dt>
+<dd>
+<i>Definition:</i> The data in the final granule that is missing; made unusable
+by sensor noise, cloud cover, or other phenomena; or otherwise unusable,
+expressed as a percentage. <br>&nbsp;</dd>
+
+<dt>
+<a NAME="cloud_cover"></a><b>Cloud Cover</b>
+</dt>
+<dd>
+<i>Definition:</i> Cloud Cover is the percentage of a scene that is obscured by
+clouds.  It is an automatically generated value and is only an estimate.  Note
+that not all MODIS datasets provide a cloud cover value.
+</dd>
+
+</dl>
+</body>
+</html>
+

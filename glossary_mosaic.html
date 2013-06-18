@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Content-Language" content="en-us">
+   <meta charset="UTF-8">
+<title>USGS Global Visualization Viewer Metadata Glossary</title>
+<link rel="stylesheet" href="../includes/glovis.css" type="text/css">
+<meta name="description" content="USGS Global Visualization">
+<meta name="keywords" content="Global Visualization, EROS, Imagery,
+    Browse Images, Satellite, Aster, Satellite Data, World">
+<meta name="publisher" content="USGS - US Geological Survey, EROS">
+<meta name="abstract" content=" ">
+</head>
+<body bgcolor="#FFFFFF">
+<!--#include virtual="/includes/header_glovisb2.html" -->
+<br>
+<br>
+<font class="glovistitle2">USGS Global Visualization Viewer Metadata Glossary:
+Tri-decadal Mosaics</font>
+
+<hr>
+<blockquote>
+<table width="100%">
+    <tr valign=TOP>
+    <td>
+        <ul class ="c2">
+            <br>
+            <li><a href="#center_coordinates">Center Coordinates</a></li>
+            <li><a href="#column_count">Column Count</a></li>
+            <li><a href="#component_count">Component Count</a></li>
+            <li><a href="#datum">Datum</a></li>
+            <li><a href="#earliest_acq_date">Earliest Acquisition Date</a></li>
+            <li><a href="#entity_id">Entity ID</a></li>
+            <li><a href="#file_format">File Format</a></li>
+            <li><a href="#latest_acq_date">Latest Acquisition Date</a></li>
+        </ul>
+    <td></td>
+    <td>
+        <ul class ="c2">
+            <br>
+            <li><a href="#platform">Platform</a></li>
+            <li><a href="#row_count">Row Count</a></li>
+            <li><a href="#sensor">Sensor</a></li>
+            <li><a href="#starting_column">Starting Column</a></li>
+            <li><a href="#starting_row">Starting Row</a></li>
+            <li><a href="#units">Units</a></li>
+            <li><a href="#utm_zone">UTM Zone</a></li>
+            <li><a href="#x_start">X Start</a></li>
+        </ul>
+    </td>
+    <td>
+        <ul class ="c2">
+            <br>
+            <li><a href="#x_increment">X Increment</a></li>
+            <li><a href="#y_start">Y Start</a></li>
+            <li><a href="#y_increment">Y Increment</a></li>
+            <li><a href="#ne_corner">Northeast Corner</a></li>
+            <li><a href="#nw_corner">Northwest Corner</a></li>
+            <li><a href="#se_corner">Southeast Corner</a></li>
+            <li><a href="#sw_corner">Southwest Corner</a></li>
+        </ul>
+    </td>
+    </tr>
+</table>
+
+<dl>
+
+<dt>
+<a NAME="center_coordinates"></a><b>Center Coordinates</b></dt>
+
+<dd>
+<i>Definition:</i> The latitude and longitude of the center point of the 5x6
+    or 2.5x3 degree mosaic.</dd>
+<br>
+<dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+</dd>
+</dl>
+<br>
+
+<dt><a name="column_count"></a><b>Column Count</b></dt>
+<dd>
+    <i>Definition:</i> The Column Count provides the number of pixels, or
+        columns, in each row of the mosaic.
+</dd>
+<dl>
+    <dt><i>Valid Values:</i></dt>
+        <dd>0 - 30000</dd>
+</dl>
+<br>
+
+<dt><a name="component_count"></a><b>Component Count</b></dt>
+<dd>
+    <i>Definition:</i> The Component Count is the number of individual Landsat
+        images from which some portion was used to create the mosaic.
+</dd>
+<br>
+
+<dt><a name="datum"></a><b>Datum</b></dt>
+<dd>
+    <i>Definition:</i> The map datum associated with the mosaic.
+</dd>
+<dl>
+    <dt><i>Valid Value:</i></dt>
+        <dd>WGS84</dd>
+</dl>
+<br>
+
+<dt><a name="earliest_acq_date"></a><b>Earliest Acquisition Date</b></dt>
+<dd>
+    <i>Definition:</i> The earliest scene acquisition date within the mosaic.
+</dd>
+<dd>Format: YYYY/MM/DD</dd>
+<br>
+
+<dt><a name="entity_id"></a><b>Entity ID</b></dt>
+<dd>
+    <i>Definition:</i> This field uniquely identifies data which can
+        be ordered from this collection.
+</dd>
+<br>
+<dl>
+    <dt>Example: MEN-ZZ-XX_YY_2000</dt>
+        <dd>ME = ETM+ Mosaic</dd>
+        <dd>N = N for Northern Hemisphere, or S for Southern Hemisphere</dd>
+        <dd>ZZ = UTM Zone</dd>
+        <dd>XX = Lower latitude boundary of 5x6 degree mosaic for Northern
+                 Hemisphere or Upper latitude boundary of 5x6 degree mosaic
+                 for Southern Hemisphere.</dd>
+        <dd>YY = Indicates the uncompressed quadrant represented by the 2.5X3
+                 degree mosaic (i.e. UL=upper left, UR=upper right, LL= lower
+                 left, or LR=lower right)</dd>
+        <dd>2000 = Denotes circa year 2000 data</dd>
+</dl>
+<br>
+
+<dt><a name="file_format"></a><b>File Format</b></dt>
+<dd>
+    <i>Definition:</i> This field is used to identify the data format.
+</dd>
+<dl>
+    <dt><i>Valid Values:</i></dt>
+        <dd>GeoTIFF (uncompressed)</dd>
+</dl>
+<br>
+
+<dt><a name="latest_acq_date"></a><b>Latest Acquisition Date</b></dt>
+<dd>
+    <i>Definition:</i> The latest scene acquisition date within the mosaic.
+</dd>
+<dd>Format: YYYY/MM/DD</dd>
+<br>
+
+<dt><a name="platform"></a><b>Platform</b></dt>
+<dd><i>Definition:</i> The Platform used to acquire the data.</dd>
+<dl>
+    <dt><i>Valid Value:</i></dt>
+        <dd>Landsat</dd>
+</dl>
+<br>
+
+<dt><a name="row_count"></a><b>Row Count</b></dt>
+<dd>
+    <i>Definition:</i> The Row Count provides the number of lines, or rows, in
+    the mosaic.
+</dd>
+<dl>
+    <dt><i>Valid Values:</i></dt>
+        <dd>0 - 20000</dd>
+</dl>
+<br>
+
+<dt><a name="sensor"></a><b>Sensor</b></dt>
+
+<dd>
+    <i>Definition:</i> This field is used to identify the sensor used to
+        acquire the data.
+</dd>
+<dl>
+    <dt>Valid values:</dt>
+    <dd>TM = Thematic Mapper (Landsat 5)</dd>
+    <dd>ETM = Enhanced Thematic Mapper Plus (Landsat 7)</dd>
+</dl>
+<br>
+
+<dt><a name="starting_column"></a><b>Starting Column</b></dt>
+<dd><i>Definition:</i> The column value of the pixel location (where 1,1 marks
+    the upper left hand most pixel) that is associated with the XStart, YStart
+    geographic coordinate.</dd>
+<br>
+
+<dt><a name="starting_row"></a><b>Starting Row</b></dt>
+<dd><i>Definition:</i> The row value of the pixel location (where 1,1 marks
+    the upper left hand most pixel) that is associated with the XStart, YStart
+    geographic coordinate.</dd>
+<br>
+
+<dt><a name="units"></a><b>Units</b></dt>
+<dd><i>Definition:</i> The mapping units associated with the mosaic.</dd>
+<dl>
+    <dt><i>Valid value:</i></dt>
+        <dd>Meters</dd>
+</dl>
+<br>
+
+<dt><a name="utm_zone"></a><b>UTM Zone</b></dt>
+<dd><i>Definition:</i> The UTM Zone defining the map projection of the mosaic.</dd>
+<br>
+
+<dt><a name="x_start"></a><b>X Start</b></dt>
+<dd><i>Definition:</i> The UTM Easting of the Starting Column pixel position.</dd>
+<br>
+
+<dt><a name="x_increment"></a><b>X Increment</b></dt>
+<dd><i>Definition:</i> The column (Easting) direction size of a pixel within
+        the delivered image.
+</dd>
+<br>
+
+<dt><a name="y_start"></a><b>Y Start</b></dt>
+<dd><i>Definition:</i> The UTM Northing of the Starting Row pixel position.
+</dd>
+<br>
+
+<dt><a name="y_increment"></a><b>Y Increment</b></dt>
+<dd><i>Definition:</i> The row (Northing) direction size of a pixel within
+        the delivered image.
+</dd>
+<br>
+
+<dt><a NAME="ne_corner"></a><b>Northeast Corner</b></dt>
+<dd>
+    <i>Definition:</i> Product upper right corner latitude and longitude.
+</dd>
+<br>
+<dl>
+<dt><i>Format: DDD&deg;MM'SS&quot;H</i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+</dd>
+</dl>
+<br>
+
+<dt>
+<a NAME="nw_corner"></a><b>Northwest Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Product upper left corner latitude and longitude.</dd>
+
+<br><dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+</dd>
+</dl>
+<br>
+
+<dt>
+<a NAME="se_corner"></a><b>Southeast Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Product lower right corner latitude and longitude.</dd>
+
+<br>
+<dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+</dd>
+</dl>
+
+<br>
+<dt>
+<a NAME="sw_corner"></a><b>Southwest Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Product lower left corner latitude and longitude.</dd>
+
+<br>
+<dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+</dd>
+</dl>
+
+</dl>
+</body>
+</html>
+

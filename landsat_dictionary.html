@@ -1,0 +1,1302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Content-Language" content="en-us">
+   <meta charset="UTF-8">
+<title>USGS Global Visualization Viewer Metadata Glossary</title>
+
+<link rel="stylesheet" href="../includes/glovis.css" type="text/css">
+<meta name="description" content="USGS Global Visualization">
+<meta name="keywords" content="Global Visualization, EROS, Imagery,
+    Browse Images, Satellite, Landsat, Satellite Data, World">
+<meta name="publisher" content="USGS - US Geological Survey, EROS">
+<meta name="abstract" content=" ">
+</head>
+<body bgcolor="#FFFFFF">
+<!--#include virtual="/includes/header_glovisb2.html" -->
+
+<div class="glovistitle2">USGS Global Visualization Viewer Metadata Glossary: Landsat</div>
+
+<div id="dictionary_contents" name="dictionary_contents">
+<table width="100%">
+<tr valign="top">
+<td>
+<ul class="c2">
+<li><a href="#acquisition_quality">Acquisition Quality</a></li>
+<li><a href="#browse_exists">Browse Exists</a></li>
+
+<li><a href="#cloud_cover">Cloud Cover</a></li>
+<li><a href="#cloud_cover_quadrant_lower_left">Cloud Cover Quadrant Lower Left</a></li>
+<li><a href="#cloud_cover_quadrant_lower_right">Cloud Cover Quadrant Lower Right</a></li>
+<li><a href="#cloud_cover_quadrant_upper_left">Cloud Cover Quadrant Upper Left</a></li>
+<li><a href="#cloud_cover_quadrant_upper_right">Cloud Cover Quadrant Upper Right</a></li>
+
+<li><a href="#corner_lower_left_latitude">Corner Lower Left Latitude</a></li>
+<li><a href="#corner_lower_left_latitude_product">Corner Lower Left Latitude Product</a></li>
+<li><a href="#corner_lower_left_longitude">Corner Lower Left Longitude</a></li>
+<li><a href="#corner_lower_left_longitude_product">Corner Lower Left Longitude Product</a></li>
+<li><a href="#corner_lower_right_latitude">Corner Lower Right Latitude</a></li>
+<li><a href="#corner_lower_right_latitude_product">Corner Lower Right Latitude Product</a></li>
+<li><a href="#corner_lower_right_longitude">Corner Lower Right Longitude</a></li>
+<li><a href="#corner_lower_right_longitude_product">Corner Lower Right Longitude Product</a></li>
+<li><a href="#corner_upper_left_latitude">Corner Upper Left Latitude</a></li>
+<li><a href="#corner_upper_left_latitude_product">Corner Upper Left Latitude Product</a></li>
+<li><a href="#corner_upper_left_longitude">Corner Upper Left Longitude</a></li>
+<li><a href="#corner_upper_left_longitude_product">Corner Upper Left Longitude Product</a></li>
+<li><a href="#corner_upper_right_latitude">Corner Upper Right Latitude</a></li>
+<li><a href="#corner_upper_right_latitude_product">Corner Upper Right Latitude Product</a></li>
+<li><a href="#corner_upper_right_longitude">Corner Upper Right Longitude</a></li>
+<li><a href="#corner_upper_right_longitude_product">Corner Upper Right Longitude Product</a></li>
+
+<li><a href="#data_category">Data Category</a></li>
+<li><a href="#data_type_l0rp">Data Type L0Rp</a></li>
+<li><a href="#data_type_level_1">Data Type L1</a></li>
+<li><a href="#date_acquired">Date Acquired</a></li>
+<li><a href="#date_acquired_gap_fill">Date Acquired Gap Fill</a></li>
+<li><a href="#datum">Datum</a></li>
+<li><a href="#day_night">Day Night</a></li>
+<li><a href="#elevation_source">Elevation Source</a></li>
+<li><a href="#ellipsoid">Ellipsoid</a></li>
+<li><a href="#ephemeris_type">Ephemeris Type</a></li>
+<li><a href="#false_easting">False Easting</a></li>
+<li><a href="#false_northing">False Northing</a></li>
+<li><a href="#full_aperture_calibration">Full Aperture calibration</a></li>
+</ul>
+<td></td>
+<td>
+<ul class ="c2">
+
+
+<li><a href="#gain_band_1">Gain Band 1</a></li>
+<li><a href="#gain_band_1">Gain Band 2</a></li>
+<li><a href="#gain_band_1">Gain Band 3</a></li>
+<li><a href="#gain_band_1">Gain Band 4</a></li>
+<li><a href="#gain_band_1">Gain Band 5</a></li>
+<li><a href="#gain_band_1">Gain Band 6</a></li>
+<li><a href="#gain_band_1">Gain Band 6 VCID 1</a></li>
+<li><a href="#gain_band_1">Gain Band 6 VCID 2</a></li>
+<li><a href="#gain_band_1">Gain Band 7</a></li>
+<li><a href="#gain_band_1">Gain Band 8</a></li>
+
+<li><a href="#gain_change_band_1">Gain Change Band 1</a></li>
+<li><a href="#gain_change_band_1">Gain Change Band 2</a></li>
+<li><a href="#gain_change_band_1">Gain Change Band 3</a></li>
+<li><a href="#gain_change_band_1">Gain Change Band 4</a></li>
+<li><a href="#gain_change_band_1">Gain Change Band 5</a></li>
+<li><a href="#gain_change_band_1">Gain Change Band 6 VCID 1</a></li>
+<li><a href="#gain_change_band_1">Gain Change Band 6 VCID 2</a></li>
+<li><a href="#gain_change_band_1">Gain Change Band 7</a></li>
+<li><a href="#gain_change_band_1">Gain Change Band 8</a></li>
+
+<li><a href="#gap_fill">Gap Fill</a></li>
+<li><a href="#gap_phase_source">Gap Phase Source</a></li>
+<li><a href="#gap_phase_statistic">Gap Phase Statistic</a></li>
+
+<li><a href="#geometric_rmse_model">Geometric RMSE Model</a></li>
+<li><a href="#geometric_rmse_model_x">Geometric RMSE Model X</a></li>
+<li><a href="#geometric_rmse_model_y">Geometric RMSE Model Y</a></li>
+<li><a href="#geometric_rmse_verify">Geometric RMSE Verify</a></li>
+
+<li><a href="#grid_cell_size_panchromatic">Grid Cell Size Panchromatic</a></li>
+<li><a href="#grid_cell_size_reflective">Grid Cell Size Reflective</a></li>
+<li><a href="#grid_cell_size_thermal">Grid Cell Size Thermal</a></li>
+
+<li><a href="#ground_control_points_model">Ground Control Points Model</a></li>
+<li><a href="#ground_control_points_verify">Ground Control Points Verify</a></li>
+
+<li><a href="#image_quality_VCID_1">Image Quality</a></li>
+<li><a href="#image_quality_VCID_1">Image Quality VCID 1</a></li>
+<li><a href="#image_quality_VCID_1">Image Quality VCID 2</a></li>
+
+<li><a href="#landsat_scene_identifier">Landsat Scene Identifier</a></li>
+
+<li><a href="#map_projection_l0ra">Map Projection L0Ra</a></li>
+<li><a href="#map_projection_l1">Map Projection L1</a></li>
+
+</ul>
+<td></td>
+<td>
+<ul class ="c2">
+
+<li><a href="#orientation">Orientation</a></li>
+<li><a href="#output_format">Output Format</a></li>
+
+<li><a href="#panchromatic_lines">Panchromatic Lines</a></li>
+<li><a href="#panchromatic_samples">Panchromatic Samples</a></li>
+
+<li><a href="#quality_band_1">Quality Band 1</a></li>
+<li><a href="#quality_band_1">Quality Band 2</a></li>
+<li><a href="#quality_band_1">Quality Band 3</a></li>
+<li><a href="#quality_band_1">Quality Band 4</a></li>
+<li><a href="#quality_band_1">Quality Band 5</a></li>
+<li><a href="#quality_band_1">Quality Band 6</a></li>
+<li><a href="#quality_band_1">Quality Band 7</a></li>
+<li><a href="#quality_band_1">Quality Band 8</a></li>
+
+<li><a href="#reflective_lines">Reflective Lines</a></li>
+<li><a href="#reflective_samples">Reflective Samples</a></li>
+
+<li><a href="#resampling_option">Resampling Option</a></li>
+
+<li><a href="#scan_gap_interpolation">Scan Gap Interpolation</a></li>
+
+<li><a href="#scene_center_latitude">Scene Center Latitude</a></li>
+<li><a href="#scene_center_longitude">Scene Center Longitude</a></li>
+
+<li><a href="#scene_mode">Scene Mode</a></li>
+<li><a href="#scene_source">Scene Source</a></li>
+<li><a href="#sensor_anomalies">Sensor Anomalies</a></li>
+<li><a href="#sensor_mode">Sensor Mode</a></li>
+<li><a href="#spacecraft_identifier">Spacecraft Identifier</a></li>
+<li><a href="#start_time">Start Time</a></li>
+<li><a href="#station_identifier">Station Identifier</a></li>
+<li><a href="#stop_time">Stop Time</a></li>
+<li><a href="#sun_azimuth">Sun Azimuth</a></li>
+<li><a href="#sun_elevation">Sun Elevation</a></li>
+
+<li><a href="#thermal_lines">Thermal Lines</a></li>
+<li><a href="#thermal_samples">Thermal Samples</a></li>
+
+<li><a href="#true_scale_latitude">True Scale Latitude</a></li>
+<li><a href="#utm_zone">UTM Zone</a></li>
+<li><a href="#vertical_longitude_from_pole">Vertical Longitude from Pole</a></li>
+
+<li><a href="#wrs_path">WRS Path</a></li>
+<li><a href="#wrs_row"> WRS Row</a></li>
+<li><a href="#wrs_type">WRS Type</a></li>
+
+</ul>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="glovis_dictionary">
+<dl>
+
+<dt><a name="acquisition_quality"></a>Acquisition Quality</dt>
+<dd class="definition">
+Acquisition Quality is a value, expressed as a single digit
+number, based on: (1) errors encountered during archive processing; and/or (2)
+ visible artifacts in the data when manually inspected.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>9 = Excellent (no quality issues or errors detected)</dd>
+  <dd>7-8 = Good (minor quality issues and/or errors detected)</dd>
+  <dd>5-6 = Fair (moderate quality issues and/or errors detected)</dd>
+  <dd>1-2 = Extremely Poor (severe quality issues and/or errors detected)</dd>
+  <dd>0 = Missing Value</dd>
+</dl>
+</dd>
+
+<dt><a name="browse_exists"></a>Browse Exists</dt>
+<dd class="definition">
+Indicates whether a browse exists for this scene at EROS.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>Y = Yes, a browse does exist for this scene</dd>
+  <dd>N = No, a browse does not exist for this scene</dd>
+</dl>
+</dd>
+
+<dt><a name="cloud_cover"></a>Cloud Cover</dt>
+<dd class="definition">
+Cloud coverage (percent) of a WRS scene.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>0.00 - 100.00 = percent cloud coverage</dd>
+  <dd> -1 = Cloud cover not calculated or assessed</dd>
+</dl>
+</dd>
+
+<dt><a name="cloud_cover_quadrant_lower_left"></a>Cloud Cover Quadrant Lower Left</dt>
+<dd class="definition">
+Cloud coverage (percent) of the lower left quadrant of the WRS scene.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>0.00 - 100.00 = percent cloud coverage</dd>
+  <dd> -1 = Cloud cover not calculated or assessed</dd>
+</dl>
+</dd>
+
+<dt><a name="cloud_cover_quadrant_lower_right"></a>Cloud Cover Quadrant Lower Right</dt>
+<dd class="definition">
+Cloud coverage (percent) of the lower right quadrant of the WRS scene.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>0.00 - 100.00 = percent cloud coverage</dd>
+  <dd> -1 = Cloud cover not calculated or assessed</dd>
+</dl>
+</dd>
+
+<dt><a name="cloud_cover_quadrant_upper_left"></a>Cloud Cover Quadrant Upper Left</dt>
+<dd class="definition">
+Cloud coverage (percent) of the upper left quadrant of the WRS scene.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>0.00 - 100.00 = percent cloud coverage</dd>
+  <dd> -1 = Cloud cover not calculated or assessed</dd>
+</dl>
+</dd>
+
+<dt><a name="cloud_cover_quadrant_upper_right"></a>Cloud Cover Quadrant Upper Right</dt>
+<dd class="definition">
+Cloud coverage (percent) of the upper right quadrant of the WRS scene.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>0.00 - 100.00 = percent cloud coverage</dd>
+  <dd> -1 = Cloud cover not calculated or assessed</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_lower_left_latitude"></a>Corner Lower Left Latitude</dt>
+<dd class="definition">
+Calculated latitude value (degrees) for the lower left corner. A positive (+) value
+ indicates North latitude. A negative (-) value indicates South latitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-90.00000 through +90.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_lower_left_latitude_product"></a>Corner Lower Left Latitude Product</dt>
+<dd class="definition">
+Latitude value (degrees) for the lower left corner (southwest corner for
+descending coverage / northeast corner for ascending coverage) of the product
+including the black fill.  A positive (+) value indicates geographic North
+latitude.  A negative (-) value indicates geographic South latitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-90.00000 through +90.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_lower_left_longitude"></a>Corner Lower Left Longitude</dt>
+<dd class="definition">
+Calculated longitude value (degrees) for the lower left corner. A positive value (+)
+ indicates East longitude. A negative (-) value indicates West longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-180.00000 through +180.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_lower_left_longitude_product"></a>Corner Lower Left Longitude Product</dt>
+<dd class="definition">
+Longitude value (degrees) for the lower left corner (southwest corner for
+descending coverage / northeast corner for ascending coverage) of the product
+including the black fill.  A positive (+) value indicates geographic East
+longitude.  A negative (-) value indicates geographic West longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-180.00000 through +180.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_lower_right_latitude"></a>Corner Lower Right Latitude</dt>
+<dd>
+Calculated latitude value (degrees) for the lower right corner. A positive (+)
+ value indicates North latitude. A negative (-) value indicates South latitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-90.00000 through +90.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_lower_right_latitude_product"></a>Corner Lower Right Latitude Product</dt>
+<dd>
+Latitude value (degrees) for the lower right corner (southeast corner for
+descending coverage / northwest corner for ascending coverage) of the product
+including the black fill.  A positive (+) value indicates geographic North
+latitude.   A negative (-) value indicates geographic South latitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-90.00000 through +90.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_lower_right_longitude"></a>Corner Lower Right Longitude</dt>
+<dd class="definition">
+Calculated longitude value (degrees) for the lower right corner. A positive value (+)
+ indicates East longitude. A negative (-) value indicates West longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-180.00000 through +180.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_lower_right_longitude_product"></a>Corner Lower Right Longitude Product</dt>
+<dd class="definition">
+Longitude value (degrees) for the lower right corner (southeast corner for
+descending coverage / northwest corner for ascending coverage) of the product
+including the black fill.  A positive (+) value indicates geographic East
+longitude.  A negative (-) value indicates geographic West longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-180.00000 through +180.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_upper_left_latitude"></a>Corner Upper Left Latitude</dt>
+<dd class="definition">
+Calculated latitude value (degrees) for the upper left corner. A positive (+)
+value indicates North latitude. A negative (-) value indicates South latitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-90.00000 through +90.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_upper_left_latitude_product"></a>Corner Upper Left Latitude Product</dt>
+<dd class="definition">
+Latitude value (degrees) for the upper left corner (northwest corner for
+descending coverage / southeast corner for ascending coverage) of the product
+including the black fill.  A positive (+) value indicates geographic North
+latitude.  A negative (-) value indicates geographic South latitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-90.00000 through +90.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_upper_left_longitude"></a>Corner Upper Left Longitude</dt>
+<dd>
+Calculated longitude value (degrees) for the upper left corner. A positive (+) value
+indicates East longitude. A negative (-) value indicates West longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-180.00000 through +180.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_upper_left_longitude_product"></a>Corner Upper Left Longitude Product</dt>
+<dd>
+Longitude value (degrees) for the upper left corner (northwest corner for
+descending coverage / southeast corner for ascending coverage) of the product
+including the black fill.  A positive (+) value indicates geographic East
+longitude.  A negative (-) value indicates geographic West longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-180.00000 through +180.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_upper_right_latitude"></a>Corner Upper Right Latitude</dt>
+<dd>
+Calculated latitude value (degrees) for the upper right corner. A positive (+) value
+ indicates North latitude. A negative (-) value indicates South latitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-90.00000 through +90.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_upper_right_latitude_product"></a>Corner Upper Right Latitude Product</dt>
+<dd>
+Latitude value (degrees) for the upper right corner (northeast corner for
+descending coverage / southwest corner for ascending coverage) of the product
+including the black fill.  A positive (+) value indicates geographic North
+latitude.  A negative (-) value indicates geographic South latitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-90.00000 through +90.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_upper_right_longitude"></a>Corner Upper Right Longitude</dt>
+<dd class="definition">
+Calculated longitude value (degrees) for the upper right corner. A positive value (+)
+ indicates East longitude. A negative (-) value indicates West longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-180.00000 through +180.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="corner_upper_right_longitude_product"></a>Corner Upper Right Longitude Product</dt>
+<dd class="definition">
+Longitude value (degrees) for the upper right corner (northeast corner for
+descending coverage / southwest corner for ascending coverage) of the product
+including the black fill.  A positive (+) value indicates geographic East
+longitude.  A negative (-) value indicates geographic West longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-180.00000 through +180.00000</dd>
+</dl>
+</dd>
+
+<dt><a name=data_category></a>Data Category</dt>
+<dd class="definition">
+Current data category where the data has been placed.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>NOMINAL = Nominal data</dd>
+</dl>
+</dd>
+
+<dt><a name=data_type_l0rp></a>Data Type L0Rp</dt>
+<dd class="definition">
+Data type identifier string used to create the L0Rp product.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>MSSA_L0RP = MSSA L0Rp data</dd>
+  <dd>MSSP_L0RP = MSSP L0Rp data</dd>
+  <dd>MSSR_L0RP = MSSR L0Rp data</dd>
+  <dd>MSSX_L0RP = MSSX L0Rp data</dd>
+  <dd>TMA_L0RP = TMA L0Rp data</dd>
+  <dd>TMR_L0RP = TMR L0Rp data</dd>
+  <dd>ETM_L0RP = ETM+ L0Rp data</dd>
+  <dd>OLI_L0RP = OLI L0Rp data</dd>
+  <dd>TIRS_L0RP = TIRS L0Rp data</dd>
+  <dd>OLI_TIRS_L0RP = OLI TIRS combined L0Rp data</dd>
+</dl>
+</dd>
+
+<dt><a name=data_type_level_1></a>Data Type L1</dt>
+<dd class="definition">
+Data type identifier string for Level 1 products.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>PR = Processing Required</dd>
+  <dd>ETM_L1G = ETM+ L1G data</dd>
+  <dd>ETM_L1GT = ETM+ L1Gt data</dd>
+  <dd>ETM_L1T = ETM+ L1T product</dd>
+  <dd>L1G = L1G data</dd>
+  <dd>L1GT = L1Gt data</dd>
+  <dd>L1T = L1T data</dd>
+  <dd>MSS_L1G = MSS L1G data</dd>
+  <dd>MSS_L1GT = MSS L1Gt data</dd>
+  <dd>MSS_L1T = MSS L1T product</dd>
+  <dd>TM_L1G = TM L1G data</dd>
+  <dd>TM_L1GT = TM L1Gt data</dd>
+  <dd>TM_L1T = TM L1T product</dd>
+  <dd>OLI_L1R = OLI L1R data</dd>
+  <dd>OLI_L1G = OLI L1G data</dd>
+  <dd>OLI_L1GS = OLI L1Gs data</dd>
+  <dd>OLI_L1GT = OLI L1Gt data</dd>
+  <dd>OLI_L1T = OLI L1T product</dd>
+  <dd>TIRS_L1R = TIRS L1R data</dd>
+  <dd>TIRS_L1G = TIRS L1G data</dd>
+  <dd>TIRS_L1GS = TIRS L1Gs data</dd>
+  <dd>TIRS_L1GT = TIRS L1Gt data</dd>
+  <dd>TIRS_L1T = TIRS L1T product</dd>
+  <dd>OLI_TIRS_L1R = OLI TIRS combined L1R data</dd>
+  <dd>OLI_TIRS_L1G = OLI TIRS combined L1G data</dd>
+  <dd>OLI_TIRS_L1GS = OLI TIRS combined L1Gs data</dd>
+  <dd>OLI_TIRS_L1GT = OLI TIRS combined L1Gt data</dd>
+  <dd>OLI_TIRS_L1T = OLI TIRS combined L1T product</dd>
+</dl>
+</dd>
+
+<dt><a name="date_acquired"></a>Date Acquired</dt>
+<dd class="definition">
+Year, month and day that this scene was imaged.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>YYYY/MM/DD</dd>
+</dl>
+</dd>
+
+<dt><a name="date_acquired_gap_fill"></a>Date Acquired Gap Fill</dt>
+<dd class="definition">
+Acquisition date of the input scenes used for the scan gap fill
+(comma separated list with a maximum of five input scenes);
+included only for gap-filled products.
+</dd>
+
+<dt><a name="datum"></a>Datum</dt>
+<dd class="definition">
+Datum used in creating the image.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>WGS84 = World Geodetic System 1984</dd>
+</dl>
+</dd>
+
+<dt><a name="day_night"></a>Day Night</dt>
+<dd class="definition">
+Day or night condition of the scene.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>DAY = Day scene</dd>
+  <dd>NIGHT = Night scene</dd>
+</dl>
+</dd>
+
+<dt><a name="elevation_source"></a>Elevation Source</dt>
+<dd class="definition">
+Digital elevation dataset that was used to terrain-correct the product.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>NED = National Elevation Dataset</dd>
+  <dd>SRTM = Shuttle Radar Topography Mission</dd>
+  <dd>GTOPO30 = Global 30 Arc Second Elevation Digital Data</dd>
+  <dd>GLS2000 = Global Land Survey 2000</dd>
+  <dd>RAMP = Radarsat Antarctic Mapping Project</dd>
+</dl>
+</dd>
+
+<dt><a name="ellipsoid"></a>Ellipsoid</dt>
+<dd class="definition">
+Ellipsoid used in creating the image.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>WGS84 = World Geodetic System 1984</dd>
+</dl>
+</dd>
+
+<dt><a name="ephemeris_type"></a>Ephemeris Type</dt>
+<dd class="definition">
+Orbital ephemeris type used.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>DEFINITIVE= Definitive ephemeris</dd>
+  <dd>PREDICTIVE = Predictive ephemeris</dd>
+</dl>
+</dd>
+
+<dt><a name="false_easting"></a>False Easting</dt>
+<dd class="definition">
+Value added to all "x" values in the rectangular coordinates for a map
+projection.  Frequently assigned to eliminate negative numbers. Expressed
+in the unit of measure identified in Planar Coordinate Unit.
+</dd>
+
+<dt><a name="false_northing"></a>False Northing</dt>
+<dd class="definition">
+Value added to all "y" values in the rectangular coordinates for a map
+projection.  Frequently assigned to eliminate negative numbers. Expressed
+in the unit of measure identified in Planar Coordinate Unit.
+</dd>
+
+<dt><a name="full_aperture_calibration"></a>Full Aperture Calibration</dt>
+<dd class="definition">
+Indicates whether the aperture flag is on.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>Y = Yes, a full aperture calibration activity exists</dd>
+  <dd>N = No full aperture calibration activity</dd>
+</dl>
+</dd>
+
+<dt><a name="gain_band_1"></a>Gain Band (1 - 6, 6 VCID* 1, 6 VCID* 2, 7 - 8)</dt>
+<dd class="definition">
+Band gain state of band detected at the start of a WRS scene.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>H = Band was acquired in high gain mode</dd>
+  <dd>L = Band was acquired in low gain mode</dd>
+  <dd>U = Unknown</dd>
+</dl>
+</dd>
+<br />* VCID = Virtual Channel Identifier
+
+<dt><a name=gain_change_band_1></a>Gain Change - Band (1 - 5, 6 VCID* 1, 6 VCID* 2, 7 - 8)</dt>
+<dd class="definition">
+The presence and direction of change in detector gain state within
+the WRS scene.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>0 = No gain change</dd>
+  <dd>+ = Change from low to high gain</dd>
+  <dd>- = Change from high to low gain</dd>
+  <dd>HH = No band gain change within the scene whose gain band state
+      was acquired in high gain mode</dd>
+  <dd>LL = No band gain change within the scene whose gain band state
+      was acquired in low gain mode</dd>
+  <dd>LH = A low to high band gain change within the scene</dd>
+  <dd>HL = A high to low band gain change within the scene</dd>
+  <dd>U = Unknown </dd>
+</dl>
+</dd>
+<br />* VCID = Virtual Channel Identifier
+
+<dt><a name=gap_fill></a>Gap Fill</dt>
+<dd class="definition">
+Percentage of image data used as fill for gap-filled and SLC-Off products.
+</dd>
+
+<dt><a name=gap_phase_source></a>Gap Phase Source</dt>
+<dd class="definition">
+Source of ephemeris data from which the gap phase statistic was generated. 
+Used for ETM+ SLC-off data only.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>DE = Definitive Ephemeris</dd>
+  <dd>PCD = Payload Correction Data</dd>
+  <dd>NA = Not Applicable (Scan Line Corrector (SLC)-on data).</dd>
+</dl>
+</dd>
+
+<dt><a name="gap_phase_statistic"></a>Gap Phase Statistic</dt>
+<dd class="definition">
+The along-track distance from the center of the
+closest forward-to-reverse scan gap to the nominal WRS scene center.  (NULL 
+only for scan line corrector (SLC)-on data)
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-17.000000 through +17.0000000 </dd>
+  <dd>Null </dd>
+</dl>
+</dd>
+
+<dt><a name="geometric_rmse_model"></a>Geometric RMSE Model</dt>
+<dd class="definition">
+Combined RMSE of the geometric residuals (meters) in both across-track and
+along-track directions measured on the GCPs used in geometric precision
+correction.
+</dd>
+
+<dt><a name="geometric_rmse_model_x"></a>Geometric RMSE Model X</dt>
+<dd class="definition">
+RMSE of the geometric residuals (meters) measured on the GCPs used in
+geometric precision correction.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Where the direction depends on the sensor:</dt>
+  <dd>ETM+ - along-track direction</dd>
+  <dd>TM - along-track direction</dd>
+  <dd>MSS - sample direction</dd>
+  <dd>OLI - across-track direction</dd>
+  <dd>TIRS - across-track direction</dd>
+</dl>
+</dd>
+
+<dt><a name="geometric_rmse_model_y"></a>Geometric RMSE Model Y</dt>
+<dd class="definition">
+RMSE of the geometric residuals (meters) measured on the GCPs used in
+geometric precision correction.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Where the direction depends on the sensor:</dt>
+  <dd>ETM+ - across-track direction</dd>
+  <dd>TM - across-track direction</dd>
+  <dd>MSS - line direction</dd>
+  <dd>OLI - along-track direction</dd>
+  <dd>TIRS - along-track direction</dd>
+</dl>
+</dd>
+
+<dt><a name="geometric_rmse_verify"></a>Geometric RMSE Verify</dt>
+<dd class="definition">
+RMSE of the geometric residuals (pixels) in both line and sample directions
+measured on the terrain-corrected product independently using GLS2000.
+</dd>
+
+<dt><a name="grid_cell_size_panchromatic"></a>Grid Cell Size Panchromatic</dt>
+<dd class="definition">
+Grid cell size used in creating the image for the pan-chromatic band.
+</dd>
+
+<dt><a name="grid_cell_size_reflective"></a>Grid Cell Size Reflective</dt>
+<dd class="definition">
+Grid cell size used in creating the image for the reflective band.
+</dd>
+
+<dt><a name="grid_cell_size_thermal"></a>Grid Cell Size Thermal</dt>
+<dd class="definition">
+Grid cell size used in creating the image for the thermal band.
+</dd>
+
+<dt><a name="ground_control_points_model"></a>Ground Control Points Model</dt>
+<dd class="definition">
+Number of ground control points used in the precision correction process.
+</dd>
+
+<dt><a name="ground_control_points_verify"></a>Ground Control Points Verify</dt>
+<dd class="definition">
+Number of ground control points used in the verification of the terrain
+corrected product.
+</dd>
+
+<dt><a name=image_quality_VCID_1></a>Image Quality VCID* 1 - 2</dt>
+<dd class="definition">
+  A single digit number that represents an image
+  quality value used by the Landsat 7 Processing System (LPS). Image Quality 1
+  represents quality for format 1 (bands 1, 2, 3, 4, 5, 6h) and Image Quality 2
+  represents quality for format 2 (bands 6l, 7 and 8). Values for each format
+  can range from 0 - 9.<br /><br />The image quality is based on the number and
+  distribution of bad scans or equivalent bad scans in a scene. It is computed
+  by dividing the total number of filled minor frames for a scene by 6313 (the
+  nominal number of image data minor frames in a major frame for 30 meter
+  bands). This will give a number of equivalent bad scans. The distribution of
+  filled minor frames is characterized as being either clustered or scattered. A
+  cluster of 128 bad scans will still yield a scene with a cluster of 246 good
+  scans which is two-thirds of a scene. A scattering of 128 bad scans may make
+  the entire image worthless.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values for Image Quality:</dt>
+  <table border=1>
+    <thead>
+    <tr>
+      <td>Value</td>
+      <td>Quality</td></tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>9</td>
+      <td>No errors detected, a perfect scene</td></tr>
+    <tr>
+      <td>8</td>
+      <td>Less than or equal to 4 equivalent bad scans, clustered</td></tr>
+    <tr>
+      <td>7</td>
+      <td>Less than or equal to 4 equivalent bad scans, scattered</td></tr>
+    <tr>
+      <td>6</td>
+      <td>Less than or equal to 16 equivalent bad scans, clustered</td></tr>
+    <tr>
+      <td>5</td>
+      <td>Less than or equal to 16 equivalent bad scans, scattered</td></tr>
+    <tr>
+      <td>4</td>
+      <td>Less than or equal to 64 equivalent bad scans, clustered</td></tr>
+    <tr>
+      <td>3</td>
+      <td>Less than or equal to 64 equivalent bad scans, scattered</td></tr>
+    <tr>
+      <td>2</td>
+      <td>Less than or equal to 128 equivalent bad scans, clustered</td></tr>
+    <tr>
+      <td>1</td>
+      <td>Less than or equal to 128 equivalent bad scans, scattered</td></tr>
+    <tr>
+      <td>0</td>
+      <td>Greater than 128 equivalent bad scans, scattered
+          <br />(more than 33% of scene is bad)</td></tr>
+    <tr>
+      <td>-1</td>
+      <td>Image quality not calculated or assessed</td></tr>
+    </tbody>
+</table>
+</dl>
+</dd>
+<br />* VCID = Virtual Channel Identifier
+
+
+<dt><a name="landsat_scene_identifier"></a>Landsat Scene Identifier</dt>
+<dd class="definition">
+Unique Landsat scene identifier.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>Landsat Scene Identifier : LXSPPPRRRYYYYDDDGSIVV</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>L = Landsat</dd>
+  <dd>X = Sensor (M = MSS, T = TM, E = ETM,
+                  O = OLI, C = Combined OLI and TIRS)</dd>
+  <dd>S = Satellite</dd>
+  <dd>PPP = WRS Path</dd>
+  <dd>RRR = WRS Row</dd>
+  <dd>YYYY = Year of Acquisition</dd>
+  <dd>DDD = Day of Acquisition Year</dd>
+  <dd>GSI = Ground Station Identifier</dd>
+  <dd>VV = Version</dd>
+</dl>
+</dd>
+
+<dt><a name="map_projection_l0ra"></a>Map Projection L0Ra</dt>
+<dd class="definition">
+L0Ra map projection selectively applied to HDTs based on geographic
+location.  Used for processed archive data.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>HOM = Hotine Oblique Mercator</dd>
+  <dd>UTM = Universal Transverse Mercator</dd>
+  <dd>PS = Polar Stereographic</dd>
+  <dd>OM = Space Oblique Mercator</dd>
+  <dd>NA = Not applicable
+</dl>
+</dd>
+
+<dt><a name="map_projection_l1"></a>Map Projection L1</dt>
+<dd class="definition">
+Level 1 map projection applied to this data.  Used for processed archive data.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>HOM = Hotine Oblique Mercator</dd>
+  <dd>LCC = Lambert Conformal Conic</dd>
+  <dd>PS = Polar Stereographic</dd>
+  <dd>SOM = Space Oblique Mercator</dd>
+  <dd>UTM = Universal Transverse Mercator</dd>
+  <dd>U = Unknown</dd>
+  <dd>NA = Not applicable</dd>
+</dl>
+</dd>
+
+<dt><a name="orientation"></a>Orientation</dt>
+<dd class="definition">
+Orientation used in creating the image.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>NOMINAL = Nominal Path</dd>
+  <dd>NORTH_UP = North Up</dd>
+  <dd>TRUE_NORTH = True North</dd>
+  <dd>USER = User</dd>
+</dl>
+</dd>
+
+<dt><a name="output_format"></a>Output Format</dt>
+<dd class="definition">
+Output format of the image.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>GEOTIFF = Geostationary Earth Orbit Tagged Image File Format</dd>
+</dl>
+</dd>
+
+<dt><a name="panchromatic_lines"></a>Panchromatic Lines</dt>
+<dd class="definition">
+Number of product lines for the pan-chromatic band. 
+</dd>
+
+<dt><a name="panchromatic_samples"></a>Panchromatic Samples</dt>
+<dd class="definition">
+Number of product samples for the pan-chromatic band. 
+</dd>
+
+<dt><a name="quality_band_1"></a>Quality Band (1 - 8)</dt>
+<dd class="definition">
+Quality for band of the scene.
+If the Quality Manual Band is set, the manual value is shown.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>9 = Excellent (no quality issues or errors detected)</dd>
+  <dd>7-8 = Good (minor quality issues and/or errors detected)</dd>
+  <dd>5-6 = Fair (moderate quality issues and/or errors detected)</dd>
+  <dd>3-4 = Poor (significant quality issues and/or errors detected)</dd>
+  <dd>1-2 = Extremely Poor (severe quality issues and/or errors detected)</dd>
+  <dd>0 = Worst</dd>
+  <dd>M = Band is missing</dd>
+  <dd>U = Band has an unknown quality score (expected but insufficient information)</dd>
+</dl>
+</dd>
+
+<dt><a name="reflective_lines"></a>Reflective Lines</dt>
+<dd class="definition">
+Number of product lines for the reflective bands.
+</dd>
+
+<dt><a name="reflective_samples"></a>Reflective Samples</dt>
+<dd class="definition">
+Number of product samples for the reflective bands.
+</dd>
+
+<dt><a name="resampling_option"></a>Resampling Option</dt>
+<dd class="definition">
+Resampling option used in creating the image.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>NEAREST_NEIGHBOR = Nearest Neighbor</dd>
+  <dd>CUBIC_CONVOLUTION = Cubic Convolution</dd>
+  <dd>MODULATION_TRANSFER_FUNCTION = Modulation Transfer Function</dd>
+  <dd>BILINEAR = Bilinear</dd>
+  <dd>KAISER_DAMPED = Kaiser Damped</dd>
+  <dd>16_POINT_SINC = 16-point sinc (sin(x)/x)</dd>
+  <dd>8_POINT_SINC = 8-point sinc (sin(x)/x)</dd>
+  <dd>DAMPED_WINDOW = Damped Window</dd>
+</dl>
+</dd>
+
+<dt><a name="scan_gap_interpolation"></a>Scan Gap Interpolation</dt>
+<dd class="definition">
+Maximum scan gap width (in units of ETM+ 30-m detectors/pixels) filled by
+interpolation.
+</dd>
+
+<dt><a name="scene_center_latitude"></a>Scene Center Latitude</dt>
+<dd class="definition">
+WRS scene center latitude (degrees). A positive (+)value indicates
+North latitude. A negative (-) value indicates South latitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-90.0000 through +90.00000</dd>
+</dl>
+</dd>
+
+
+<dt><a name="scene_center_longitude"></a>Scene Center Longitude</dt>
+<dd class="definition">
+WRS scene center longitude (degrees).  A positive (+) value indicates
+East longitude. A negative (-) value indicates West longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-180.00000 through +180.00000</dd>
+</dl>
+</dd>
+
+<dt><a name="scene_mode"></a>Scene Mode</dt>
+<dd class="definition">
+Signal processing prior to transmission from satellite to ground station.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>COMPRESSED = Compressed mode used to acquire the first 3 bands;
+      the remaining bands are acquired in a linear mode</dd>
+  <dd>LINEAR = Linear mode used to acquire all bands</dd>
+  <dd>U = Unknown</dd>
+</dl>
+</dd>
+
+<dt><a name="scene_source"></a>Scene Source</dt>
+<dd class="definition">
+Source that this version of the scene is stored.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>LAM = Landsat Archive Manager</dd>
+  <dd>DLT = Digital Linear Tape</dd>
+  <dd>HDT = High Density Tape</dd>
+  <dd>FILM = Film </dd>
+  <dd>DCT = Digital Cassette Tape</dd>
+</dl>
+</dd>
+
+<dt><a name="sensor_anomalies"></a>Sensor Anomalies</dt>
+<dd class="definition">
+Special sensor condition (comma separated list) that pertains to
+this acquisition.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>ASCENDING_DESCENDING = Ascending/Descending problem
+      Landsat 4/5 coordinates recalculated for descending.</dd>
+  <dd>BAND_4_NOT_DECOMPRESSED = Band 4 is not decompressed = dynamic range of 0 -
+64. Affects only the first few months of Landsat 4, band 4 acquisitions.</dd>
+  <dd>BUMPER_MODE = Landsat 5 or Landsat 7 scene acquired while
+      the satellite was in bumper mode. Landsat 5 was permanently placed
+      into bumper mode May 1, 2002. Landsat 7 was permanently placed
+      into bumper mode April 1, 2007.</dd>
+  <dd>FRAMING = Poor framing problem.</dd>
+  <dd>LINE_START_ANOMALY = Line Start Anomaly (Landsat 3 only);
+      up to one third of the image data is missing; quality ratings
+      based on image data present.</dd>
+  <dd>N = No sensor anomaly exists.</dd>
+  <dd>POST_LAUNCH = Post launch problems from TMACS.</dd>
+  <dd>PRE_WRS = Pre WRS experimental data, scene center may be
+      geographically off the WRS orbital track.</dd>
+  <dd>RADIOMETRIC_CALIBRATION_DATA = Engineering radiometric
+      calibration data.</dd>
+  <dd>SCAN_MIRROR_PULSE = Start-of-scan, end-of-scan, and mid-scan markers
+      could not be turned off resulting in the scan mirror pulse anomaly
+      through the center of Landsat 5 MSS scenes in 2012.
+  <dd>SENSOR_WARM_UP = Sensor warm-up problem; roller coaster defect.</dd>
+  <dd>SLC_OFF = Scan Line Corrector off.</dd>
+  <dd>STRIPING = Striping problem.</dd>
+</dl>
+</dd>
+
+<dt><a name="sensor_mode"></a>Sensor Mode</dt>
+<dd class="definition">
+Mode that the sensor was in during capture of this interval.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>BUMPER = Bumper mode</dd>
+  <dd>SAM = SAM (Scan  Angle Monitor) mode</dd>
+</dl>
+</dd>
+
+<dt><a name="spacecraft_identifier"></a>Spacecraft Identifier</dt>
+<dd class="definition">
+Spacecraft from which the data was captured.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>Landsat 1</dd>
+  <dd>Landsat 2</dd>
+  <dd>Landsat 3</dd>
+  <dd>Landsat 4</dd>
+  <dd>Landsat 5</dd>
+  <dd>Landsat 7</dd>
+  <dd>Landsat 8</dd>
+</dl>
+</dd>
+
+<dt><a name="start_time"></a>Start Time</dt>
+<dd class="definition">
+Year, Day of year and GMT spacecraft start time of
+either the first major frame of the interval or the start of a WRS scene.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>YYYY:DDD:HH:MI:SS.SSSSSSS</dd>
+
+  <dt>Where:</dt>
+  <dd>YYYY = Four digit year</dd>
+  <dd>DDD = Day of year</dd>
+  <dd>HH = Hour (00-23)</dd>
+  <dd>MI = Minute</dd>
+  <dd>SS.SSSSSSS = Fractional seconds</dd>
+</dl>
+</dd>
+
+<dt><a name="station_identifier"></a>Station Identifier</dt>
+<dd class="definition">
+Original ground receiving station to which this data was downlinked.
+</dd>
+<dd class="defined_values">
+<dl>
+<dt>Values:</dt>
+<dd>AAA = Data held by EROS, North American receiving site unknown</dd>
+<dd>ASA = Data held by EROS, Receiving station, Alice Springs, Australia</dd>
+<dd>ASN = Data held by EROS, Receiving station, Alice Springs, Australia</dd>
+<dd>BJC = Data held by EROS, Receiving station, Beijing, China</dd>
+<dd>BKT = Data held by EROS, Receiving station, Bangkok, Thailand</dd>
+<dd>CHM = Data held by EROS, Receiving station, Chetumal, Mexico</dd>
+<dd>COA = Data held by EROS, Receiving station, Cordoba, Argentina</dd>
+<dd>CPE = Data held by EROS, Receiving station, Cotopaxi, Ecuador</dd>
+<dd>CUB = Data held by EROS, Receiving station, Cuiaba, Brazil</dd>
+<dd>DKI = Data held by EROS, Receiving station, Parepare, Indonesia</dd>
+<dd>EDC = Data held by EROS, Receiving station unknown</dd>
+<dd>FUI = Data held by EROS, Receiving station, Fucino, Italy (Historical)</dd>
+<dd>GLC = Data held by EROS, Receiving station, Gilmore Creek, AK, US</dd>
+<dd>GNC = Data held by EROS, Receiving station, Gatineau, Canada</dd>
+<dd>HAJ = Data held by EROS, Receiving station, Hatoyama, Japan</dd>
+<dd>HIJ = Data held by EROS, Receiving station, Hiroshima, Japan</dd>
+<dd>HOA = Data held by EROS, Receiving station, Hobart, Australia</dd>
+<dd>IKR = Data held by EROS, Receiving station, Irkutsk, Russia</dd>
+<dd>ISP = Data held by EROS, Receiving station, Islamabad, Pakistan</dd>
+<dd>JSA = Data held by EROS, Receiving station, Hartebeesthoek, South Africa</dd>
+<dd>KIS = Data held by EROS, Receiving station, Kiruna, Sweden </dd>
+<dd>KHC = Data held by EROS, Receiving station, KaShi, China</dd>
+<dd>LGS = Data held by EROS, Landsat 5 data acquired by EROS (beginning July 1, 2001)</dd>
+<dd>MGR = Data held by EROS, Receiving station, Magadan, Russia</dd>
+<dd>MLK = Data held by EROS, Receiving station, Malinda, Kenya</dd>
+<dd>MOR = Data held by EROS, Receiving station, Moscow, Russia</dd>
+<dd>MPS = Data held by EROS, Receiving station, Maspalomas, Spain</dd>
+<dd>MTI = Data held by EROS, Receiving station, Matera, Italy</dd>
+<dd>NSG = Data held by EROS, Receiving station, Neustrelitz, Germany</dd>
+<dd>PAC = Data held by EROS, Receiving station, Prince Albert, Canada</dd>
+<dd>PFS = Data held by EROS, Receiving station, Poker Flats, Alaska</dd>
+<dd>SGS = Data held by EROS, Receiving station, Svalbard, Norway</dd>
+<dd>SGI = Data held by EROS, Receiving station, Shandnagar, India</dd>
+<dd>XXO = Data held by EROS, Receiving station unknown</dd>
+<dd>XXX = Data held by EROS, Receiving station unknown</dd>
+</dl>
+</dd>
+
+<dt><a name="stop_time"></a>Stop Time</dt>
+<dd class="definition">
+Year, Day of year and GMT spacecraft stop time of either
+the last major frame of the interval or the stop of a WRS scene.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>YYYY:DDD:HH:MI:SS.SSSSSSS</dd>
+
+  <dt>Where:</dt>
+  <dd>YYYY = Four digit year</dd>
+  <dd>DDD = Day of year</dd>
+  <dd>HH = Hour (00-23)</dd>
+  <dd>MI = Minute</dd>
+  <dd>SS.SSSSSSS = Fractional seconds</dd>
+</dl>
+</dd>
+
+<dt><a name="sun_azimuth"></a>Sun Azimuth</dt>
+<dd class="definition">
+Sun azimuth angle (degrees) at the WRS scene center.
+A positive value (+) indicates angles to the East or clockwise from North.
+Zero indicates North.  A negative value (-) indicates angles to the West
+or counterclockwise from North.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-180.0000000 through +180.0000000 degrees</dd>
+</dl>
+</dd>
+
+<dt><a name=sun_elevation></a>Sun Elevation</dt>
+<dd class="definition">
+Sun elevation angle (degrees) at the WRS scene center.  A positive value (+) indicates a daytime scene.  Zero indicates a nighttime scene.  A negative value (-) indicates a nighttime scene.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>-90.0000000 through +90.0000000 degrees</dd>
+</dl>
+</dd>
+
+<dt><a name="thermal_lines"></a>Thermal Lines</dt>
+<dd class="definition">
+Number of product lines for the thermal bands.
+</dd>
+
+<dt><a name="thermal_samples"></a>Thermal Samples</dt>
+<dd class="definition">
+Number of product samples for the thermal bands.
+</dd>
+
+<dt><a name="true_scale_latitude"></a>True Scale Latitude</dt>
+<dd class="definition">
+Latitude of true scale in a map projection.
+</dd>
+
+<dt><a name="utm_zone"></a>UTM Zone</dt>
+<dd class="definition">
+UTM (Universal Transverse Mercator) zone number in a map projection.  A
+negative zone indicates that the false northing needs to be applied to the
+northing coordinate and a positive zone indicates that the false northing
+has been applied.
+</dd>
+
+<dt><a name="vertical_longitude_from_pole"></a>Vertical Longitude from Pole</dt>
+<dd class="definition">
+Vertical longitude (decimal degrees) from the pole.
+</dd>
+
+<dt><a name="wrs_path"></a>WRS Path</dt>
+<dd class="definition">
+WRS-defined nominal Landsat satellite track (path).
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>001 - 251</dd>
+</dl>
+</dd>
+
+<dt><a name="wrs_row"></a>WRS Row</dt>
+<dd class="definition">
+WRS latitudinal center line of a Landsat image.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>001-059 = Northern Hemisphere (Descending)</dd>
+  <dd>060 = Equator (Descending)</dd>
+  <dd>061-119 = Southern Hemisphere (Descending)</dd>
+  <dd>120-122 = Southern Polar Zone (Descending)</dd>
+  <dd>123-183 = Southern Hemisphere (Ascending)</dd>
+  <dd>184 = Equator (Ascending)</dd>
+  <dd>185-246 = Northern Hemisphere (Ascending)</dd>
+  <dd>247-248 = Northern Polar Zone (Descending)</dd>
+</dl>
+</dd>
+
+<dt><a name="wrs_type"></a>WRS Type</dt>
+<dd class="definition">
+WRS which applies to the acquisition.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Values:</dt>
+  <dd>1 = Landsat Satellites 1, 2, 3</dd>
+  <dd>2 = Landsat Satellites 4, 5, 7, 8</dd>
+</dl>
+</dd>
+
+</dl>
+</div>
+
+</body>
+</html>
+

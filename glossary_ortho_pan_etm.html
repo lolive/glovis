@@ -1,0 +1,322 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Content-Language" content="en-us">
+   <meta charset="UTF-8">
+<title>USGS Global Visualization Viewer Metadata Glossary</title>
+<link rel="stylesheet" href="../includes/glovis.css" type="text/css">
+<meta name="description" content="USGS Global Visualization">
+<meta name="keywords" content="Global Visualization, EROS, Imagery,
+    Browse Images, Satellite, Satellite Data, World">
+<meta name="publisher" content="USGS - US Geological Survey, EROS">
+<meta name="abstract" content=" ">
+</head>
+<body bgcolor="#FFFFFF">
+<!--#include virtual="/includes/header_glovisb2.html" -->
+<br>
+<br>
+<font class="glovistitle2">USGS Global Visualization Viewer Metadata Glossary:
+Orthorectified ETM+ and Pansharpened ETM+</font>
+
+<hr>
+<blockquote>
+<table width="100%">
+<tr valign=TOP>
+<td>
+<li><a href="#entity_id">Entity ID</a></li>
+<li><a href="#scene_size">Scene Size</a></li>
+<li><a href="#acquisition_date">Acquisition Date</a></li>
+<li><a href="#cloud_cover">Scene Cloud Cover</a></li>
+<li><a href="#pan_sharp">Pan Sharpened</a></li>
+<li><a href="#wrs_path">WRS-2 Path</a></li>
+</td>
+
+<td>
+<li><a href="#wrs_row">WRS-2 Row</a></li>
+<li><a href="#zone">Zone</a></li>
+<li><a href="#ul_corner_lat">Upper Left Corner</a></li>
+<li><a href="#ur_corner_lat">Upper Right Corner</a></li>
+<li><a href="#ll_corner_lat">Lower Left Corner</a></li>
+</td>
+
+<td>
+<li><a href="#lr_corner_lat">Lower Right Corner</a></li>
+<li><a href="#scene_center_lat">Scene Center</a></li>
+<li><a href="#sun_azimuth">Sun Azimuth</a></li>
+<li><a href="#sun_elevation">Sun Elevation</a></li>
+<li><a href="#browse_avail">Browse Available</a></li>
+</td>
+</tr>
+</table>
+</blockquote>
+
+<dl>
+<dt><a NAME="entity_id"></a><b>Entity ID</b></dt>
+<dd><i>Definition:</i> This field uniquely identifies the scene for ordering
+   it from Earth Explorer.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format: ExPpppRrrr_styyyymmdd</dt>
+    <dd>
+    <table>
+        <tr VALIGN=TOP>
+        <td>x</td>
+        <td>Landsat Orthorectified data indicator
+                <dt>L = ETM+</dt>
+                <dt>P = ETM+ Pansharpened</dt>
+        </td>
+        </tr>
+        <tr valign=top>
+        <td>ppp</td>
+        <td>Path</td>
+        </tr>
+        <tr valign=top>
+        <td>rrr</td>
+        <td>Row</td>
+        </tr>
+        <tr valign=top>
+        <td>s</td>
+        <td>Satellite number.
+                <dt>7 = Landsat 7</dt>
+        </td>
+        </tr>
+        <tr valign=top>
+        <td>t</td>
+        <td>Sensor Type
+                <dt>T = 28.5 multi-spectral data (6 bands)</dt>
+                <dt>F = Data fusion</dt>
+        </td>
+        </tr>
+        <tr valign=top>
+        <td>yyyy</td>
+        <td>Year of acquisition</td>
+        </tr>
+        <tr valign=top>
+        <td>mm</td>
+        <td>Month of acquisition</td>
+        </tr>
+        <tr valign=top>
+        <td>dd</td>
+        <td>Day of acquisition</td>
+        </tr>
+    </table>
+    </dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="scene_size"></a><b>Scene Size</b></dt>
+<dd><i>Definition </i> Size of the total granule in megabytes, including the
+.hdr and .jpg files.</dd>
+</dl>
+
+<dl>
+<dt><a NAME="acquisition_date"></a><b>Acquisition Date</b></dt>
+<dd><i>Definition:</i> The date the image was acquired.</dd>
+<br>&nbsp;
+<dd>
+    <dl>
+    <dd>Format: YYYY/MM/DD</dd>
+    </dl>
+</dd>
+</dl>
+
+<dl>
+<dt><a NAME="cloud_cover"></a><b>Scene Cloud Cover</b></dt>
+<dd><i>Definition:</i> The Scene Cloud Cover is the percentage of the entire
+image obscured by clouds and their shadows. The percentage is displayed in
+increments of 10%. Cloud Cover is a subjective call made from interpreting a
+single band of the image on film. It is therefore, approximate in nature.</dd>
+<p>Note: a small number of scenes were categorized with inaccurate cloud cover
+information. Before being added to the data archive, all selected images had to
+be cloud-free or contain minimal cloud cover which resulted in a small number
+of scenes to be categorized as having a 90% cloud cover, which is inaccurate.
+The problem is currently being investigated.
+</dl>
+
+<dl>
+<dt><a NAME="pan_sharp"></a><b>Pan Sharpened</b></dt>
+<dd><i>Definition:</i> This field indicates whether the granule is Pan
+Sharpened.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Valid Values:</dt>
+    <dd>Yes</dd>
+    <dd>No</dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="wrs_path"></a><b>WRS-2 Path</b></dt>
+<dd><i>Definition:</i> The WRS-2 Path number associated with the scene.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Valid Values:</dt>
+    <dd>1 through 233</dd>
+</dl>
+<p>The Path is the WRS-2 path into which the scene falls. Sequential
+numbers from east to west are assigned to 233 nominal satellite tracks. Path
+numbers can be used with Row numbers to designate a geographic search for a
+nominal scene center.<p>
+The consistency and repeatability of the path for each satellite provides
+a common reference for all scenes acquired.
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="wrs_row"></a><b>WRS-2 Row</b></dt>
+<dd><i>Definition:</i> The WRS-2 Row number associated with the scene.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Valid Values:</dt>
+    <dd>1 through 248</dd>
+</dl>
+<p>The Row is the WRS-2 row into which the scene falls. This nominal
+configuration begins with row 1 at North 80 degrees 47 minutes and ends
+at row 122 at South 81 degrees 51 minutes for daylight acquisitions. Row
+60 corresponds with the equator at 0 degrees latitude.</dd><br>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="zone"></a><b>Zone</b></dt>
+<dd><i>Definition:</i> UTM zone number.</dd>
+</dl>
+
+<dl>
+<dt><a NAME="ul_corner_lat"></a><b>Upper Left Corner</b></dt>
+<dd><i>Definition:</i> Scene upper left corner latitude and longitude.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format: DDD&deg;MM'SS&quot;H</dt>
+    <dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for
+    Longitude)</dd>
+    <dd>MM = Minutes (Valid values: 0-59)</dd>
+    <dd>SS = Seconds (Valid values: 0-59)</dd>
+    <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for
+    Longitude)</dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="ur_corner_lat"></a><b>Upper Right Corner</b></dt>
+<dd><i>Definition:</i> Scene upper right corner latitude and longitude.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format: DDD&deg;MM'SS&quot;H</dt>
+    <dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for
+    Longitude)</dd>
+    <dd>MM = Minutes (Valid values: 0-59)</dd>
+    <dd>SS = Seconds (Valid values: 0-59)</dd>
+    <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for
+    Longitude)</dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="ll_corner_lat"></a><b>Lower Left Corner</b></dt>
+<dd><i>Definition:</i> Scene lower left corner latitude and longitude.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format: DDD&deg;MM'SS&quot;H</dt>
+    <dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for
+    Longitude)</dd>
+    <dd>MM = Minutes (Valid values: 0-59)</dd>
+    <dd>SS = Seconds (Valid values: 0-59)</dd>
+    <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for
+    Longitude)</dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="lr_corner_lat"></a><b>Lower Right Corner</b></dt>
+<dd><i>Definition:</i> Scene lower right corner latitude and longitude.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format: DDD&deg;MM'SS&quot;H</dt>
+    <dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for
+    Longitude)</dd>
+    <dd>MM = Minutes (Valid values: 0-59)</dd>
+    <dd>SS = Seconds (Valid values: 0-59)</dd>
+    <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for
+    Longitude)</dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="scene_center_lat"></a><b>Scene Center</b></dt>
+<dd><i>Definition:</i> WRS-2 Scene Center Latitude/Longitude.</dd>
+<br>&nbsp;
+<dd>
+<dl>
+    <dt>Format: DDD&deg;MM'SS&quot;H</dt>
+    <dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for
+    Longitude)</dd>
+    <dd>MM = Minutes (Valid values: 0-59)</dd>
+    <dd>SS = Seconds (Valid values: 0-59)</dd>
+    <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for
+    Longitude)</dd>
+</dl>
+</dd>
+</dl>
+
+
+<dl>
+<dt><a NAME="sun_azimuth"></a><b>Sun Azimuth</b></dt>
+<dd><i>Definition:</i> Azimuth is the angle of horizontal deviation,
+measured clockwise, of a bearing from a standard direction.</dd>
+<dl>
+    <dt>Valid Values:</dt>
+    <dd>-180.000000 through +180.000000 degrees</dd>
+</dl>
+<p>A positive value [+] indicates angles to the East or clockwise from North;
+a negative value [-] indicates angles to the West or counter-clockwise from
+North.
+</dl>
+
+
+<dl>
+<dt><a NAME="sun_elevation"></a><b>Sun Elevation</b></dt>
+<dd><i>Definition:</i> Elevation is the angle of vertical deviation,
+measured clockwise, of a bearing from a standard direction.</dd>
+<dl>
+    <dt>Valid Values:</dt>
+    <dd>-90.000000 through +90.000000 degrees</dd>
+</dl>
+<p>A positive value [+] indicates a daytime scene; a negative value [-]
+indicates a nighttime scene.
+</dl>
+
+
+<dl>
+<dt><a NAME="browse_avail"></a><b>Browse Available</b></dt>
+<dd><i>Definition:</i> This field indicates whether a browse image is
+available.</dd>
+</dl>
+
+</body>
+</html>

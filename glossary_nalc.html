@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Content-Language" content="en-us">
+   <meta charset="UTF-8">
+<title>USGS Global Visualization Viewer Metadata Glossary</title>
+<link rel="stylesheet" href="../includes/glovis.css" type="text/css">
+<meta name="description" content="USGS Global Visualization">
+<meta name="keywords" content="Global Visualization, EROS, Imagery,
+    Browse Images, Satellite, Aster, Satellite Data, World">
+<meta name="publisher" content="USGS - US Geological Survey, EROS">
+<meta name="abstract" content=" ">
+</head>
+<body bgcolor="#FFFFFF">
+<!--#include virtual="/includes/header_glovisb2.html" -->
+<br>
+<br>
+<font class="glovistitle2">USGS Global Visualization Viewer Metadata Glossary:
+NALC</font>
+
+<hr>
+<blockquote>
+<table width="100%">
+    <tr valign=TOP>
+    <td>
+        <ul class ="c2">
+            <br>
+            <li><a href="#acq_date">Acquisition Date</a></li>
+            <li><a href="#browse_avail_flag">Browse Availability</a></li>
+            <li><a href="#cloud_cover">Cloud Cover</a></li>
+            <li><a href="#entity_id">Entity ID</a></li>
+            <li><a href="#map_projection_code">Map Projection</a></li>
+            <li><a href="#path_nbr">Path</a></li>
+        </ul>
+    <td></td>
+    <td>
+        <ul class ="c2">
+            <br>
+            <li><a href="#proc_level">Processing Level</a></li>
+            <li><a href="#resampling_tech">Resampling Technique</a></li>
+            <li><a href="#resampling_tech_dem">Resampling Technique DEM</a></li>
+            <li><a href="#row_nbr">Row</a></li>
+            <li><a href="#scene_id">Scene ID</a></li>
+        </ul>
+    </td>
+    <td>
+        <ul class ="c2">
+            <br>
+            <li><a href="#ul_corner_lat">Upper Left Corner</a></li>
+            <li><a href="#ur_corner_lat">Upper Right Corner</a></li>
+            <li><a href="#ll_corner_lat">Lower Left Corner</a></li>
+            <li><a href="#lr_corner_lat">Lower Right Corner</a></li>
+            <li><a href="#scene_center_lat">Scene Center</a></li>
+        </ul>
+    </td>
+    </tr>
+</table>
+
+<dl>
+
+<dt><a name="acq_date"></a><b>Acquisition Date</b></dt>
+<dd>
+    <i>Definition:</i>Date data was acquired for each scene in decade.
+</dd>
+<dd>Format: YYYY/MM/DD</dd>
+<br>
+<dt><a name="browse_avail_flag"></a><b>Browse Availability</b></dt>
+
+<dd>
+    <i>Definition:</i>This flag identifies whether or not
+    the entity has a browse image available with it. A browse image
+    provides the user with a visual overview of an inventory item.
+    This is an on-line digital (raster format) image of an individual
+    scene.
+</dd>
+<br>
+<dl>
+    <dt><i>Valid Codes:</i></dt>
+        <dd>Y = Yes</dd>
+        <dd>N = No</dd>
+</dl>
+<br>
+<dt><a name="cloud_cover"></a><b>Cloud Cover</b></dt>
+<dd>
+    <i>Definition:</i> Cloud Cover is the percentage of the entire image
+    obscured by clouds and their shadows. The percentage is displayed in
+    increments of 10%.
+</dd>
+<br>
+<dl>
+    <dt><i>Valid Codes:</i></dt>
+    <dd>0 = 0% but less than 10%</dd>
+    <dd>1 = 10% but less than 20%</dd>
+    <dd>2 = 20% but less than 30%</dd>
+    <dd>3 = 30% but less than 40%</dd>
+    <dd>4 = 40% but less than 50%</dd>
+    <dd>5 = 50% but less than 60%</dd>
+    <dd>6 = 60% but less than 70%</dd>
+    <dd>7 = 70% but less than 80%</dd>
+    <dd>8 = 80% but less than 90%</dd>
+    <dd>9 = 90% up to 100%</dd>
+</dl>
+<br>
+<dt><a name="entity_id"></a><b>Entity ID</b></dt>
+<dd>
+    <i>Definition:</i> This field uniquely identifies data which can
+        be ordered in any combination of unique products.
+</dd>
+<dd>Example of NALC Entity ID: LPNALC046029U<br><br></dd>
+
+<dl>
+    <dt><i>Valid Format:</i> DDNNNNPPPRRRX</dt>
+    <dd>D = Data set idenifier</dd>
+    <dd>N = NALC</dd>
+    <dd>P = Path</dd>
+    <dd>R = Row</dd>
+    <dd>X = R for restricted data , U for unrestricted data</dd>
+</dl>
+<br>
+
+<dt><a name="map_projection_code"></a><b>Map Projection</b></dt>
+<dd><i>Definition:</i>Map Projection used on scenes.</dd>
+<dd>Valid value is Universal Transverse Mercator (UTM)<br><br></dd>
+
+<dt><a name="path_nbr"></a><b>Path</b></dt>
+<dd>
+    <i>Definition:</i> The <b>Path</b> is the longitudinal center line of a
+    Landsat scene, corresponding to the center of an orbital track. Sequential
+    numbers from east to west are assigned to 233 nominal satellite tracks for
+    Landsat 4 and 5. Landsat 1-3 satellites have 251 tracks (paths). Path
+    numbers can be used with Row numbers to designate a geographic search for a
+    nominal scene center. 
+
+    <p>The consistency and repeatability of the path for each satellite
+    provides a common reference for all scenes acquired.  The path is also a
+    key indexing field for subsequent acquisition requests as well as data base
+    inquiries.</p>
+</dd>
+<br>
+
+<dt><a name="proc_level"></a><b>Processing Level</b></dt>
+
+<dd><i>Definition:</i> The processing level applied to the scene.</dd>
+
+<dl>
+    <dt>Valid codes:</dt>
+    <dd>C = Composite</dd>
+    <dd>E = DEM Extracted</dd>
+    <dd>G = Geocoded/Georegistered</dd>
+    <dd>T = Terrain Corrected/Georegistered</dd>
+</dl>
+<br>
+
+<dt><a name="resampling_tech"></a><b>Resampling Technique</b></dt>
+<dd><i>Definition:</i> The resampling applied to the scene.</dd>
+<dd>Valid code: CC = Cubic Convolution</dd>
+<br>
+
+<dt><a name="resampling_tech_dem"></a><b>Resampling Technique DEM</b></dt>
+<dd><i>Definition:</i> The resampling applied to the DEM.</dd>
+<dd>Valid code: BI = Bilinear</dd>
+<br>
+
+<dt><a name="row_nbr"></a><b>Row</b></dt>
+<dd>
+    <i>Definition:</i> The <b>Row</b> is the latitudinal center line of a
+    Landsat scene. This nominal configuration begins with row 1 at North 80
+    degrees 47 minutes and ends at row 122 at South 81 degrees 51 minutes for
+    daylight acquisitions. Row 60 corresponds with the equator at 0 degrees
+    latitude. A total of 248 rows are involved for all Landsat missions. Rows
+    123-248 are associated with night acquisitions.
+</dd>
+<br>
+
+<dt><a name="scene_id"></a><b>Scene ID.</b></dt>
+<dd><i>Definition:</i> The scene id of the image used in the decade.</dd>
+<br>
+
+<dt><a NAME="ul_corner_lat"></a><b>Upper Left Corner</b></dt>
+<dd>
+    <i>Definition:</i> Product tile upper left corner latitude and longitude.
+</dd>
+<br>
+<dl>
+<dt><i>Format: DDD&deg;MM'SS&quot;H</i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+</dd>
+</dl>
+<br>
+
+<dt>
+<a NAME="ur_corner_lat"></a><b>Upper Right Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Product tile upper right corner latitude and longitude.</dd>
+
+<br><dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+</dd>
+</dl>
+
+
+<br>
+<dt>
+<a NAME="ll_corner_lat"></a><b>Lower Left Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Product tile lower left corner latitude and longitude.</dd>
+
+<br>
+<dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+</dd>
+</dl>
+
+<br>
+<dt>
+<a NAME="lr_corner_lat"></a><b>Lower Right Corner</b></dt>
+
+<dd>
+<i>Definition:</i> Product tile lower right corner latitude and longitude.</dd>
+
+<br>
+<dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+</dd>
+</dl>
+
+<br>
+<dt>
+<a NAME="scene_center_lat"></a><b>Scene Center</b></dt>
+
+<dd>
+<i>Definition:</i> The actual latitude and longitude of the center point on 
+    the full scene. Hemisphere indicated by the N = North, S=South, E=East 
+    and W = West.</dd>
+<br>
+<dl>
+<dt>
+<i>Format: DDD&deg;MM'SS&quot;H</i></i></dt>
+<dd>DDD = Degrees (Valid values: 0-90 for Latitude, 0-180 for Longitude)</dd>
+<dd>MM = Minutes (Valid values: 0-59)</dd>
+<dd>SS = Seconds (Valid values: 0-59)</dd>
+<dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)
+</dd>
+</dl>
+</dl>
+</body>
+</html>
+

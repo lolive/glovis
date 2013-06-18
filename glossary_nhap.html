@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Content-Language" content="en-us">
+   <meta charset="UTF-8">
+<title>USGS Global Visualization Viewer Metadata Glossary</title>
+<link rel="stylesheet" href="../includes/glovis.css" type="text/css">
+<meta name="description" content="USGS Global Visualization">
+<meta name="keywords" content="Global Visualization, EROS, Imagery,
+    Browse Images, Satellite, Aster, Satellite Data, World">
+<meta name="publisher" content="USGS - US Geological Survey, EROS">
+<meta name="abstract" content=" ">
+</head>
+<body bgcolor="#FFFFFF">
+<!--#include virtual="/includes/header_glovisb2.html" -->
+<br>
+<div class="glovistitle2">USGS Global Visualization Viewer Metadata Glossary:
+NHAP</div>
+
+<div id="dictionary_contents" name="dictionary_contents">
+<table width="100%">
+<tr valign=TOP>
+<td>
+<ul class="c2">
+    <li><a href="#project_name">Project Name</a></li>
+    <li><a href="#roll_number">Roll Number</a></li>
+    <li><a href="#frame_number">Frame Number</a></li>
+    <li><a href="#acquisition_date">Acquisition Date</a></li>
+    <li><a href="#film_type">Film Type</a></li>
+    <li><a href="#scale">Scale</a></li>
+</ul>
+</td>
+<td>
+<ul class="c2">
+    <li><a href="#ul_corner_lat">Upper Left Corner</a></li>
+    <li><a href="#ur_corner_lat">Upper Right Corner</a></li>
+    <li><a href="#ll_corner_lat">Lower Left Corner</a></li>
+    <li><a href="#lr_corner_lat">Lower Right Corner</a></li>
+    <li><a href="#scene_center_lat">Scene Center</a></li>
+</ul>
+</td>
+<td>
+<ul class="c2">
+    <li><a href="#county">County</a></li>
+    <li><a href="#state">State</a></li>
+    <li><a href="#nominal_focal_length">Nominal Focal Length</a></li>
+    <li><a href="#entity_id">Entity Id</a></li>
+    <li><a href="#product_available">Product Available</a></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+
+<div class="glovis_dictionary">
+<dl>
+
+<dt><a NAME="project_name"></a>Project Name</dt>
+<dd class="definition">
+Name used to uniquely identify a project.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Valid codes include:</dt>
+  <dd>NHAP84 = NHAP followed by the year contracted</dd>
+  <dd>NAPP02 = NHAP second cycle</dd>
+</dl>
+</dd>
+
+<dt><a NAME="roll_number"></a>Roll Number</dt>
+<dd class="definition">
+The number assigned to a roll of film.
+</dd>
+
+<dt><a NAME="frame_number"></a>Frame Number</dt>
+<dd class="definition">
+A number that indicates an image position on a roll of film.
+</dd>
+
+<dt><a NAME="acquisition_date"></a>Acquisition Date</dt>
+<dd class="definition">
+The acquisition date refers to the date the image was acquired.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>YYYY/MM/DD</dd>
+</dl>
+</dd>
+
+<dt><a NAME="film_type"></a>Film Type</dt>
+<dd class="definition">
+Aerial film type used for aerial mapping.<br><br>
+Black-and-white (B&amp;W) panchromatic film is sensitive to the
+full visible portion of the electromagnetic spectrum of light and
+captures images in tones of gray ranging from black to white.<br><br>
+Color infrared (CIR), or false color, film is sensitive to green and red
+in the visible portion of spectrum of light and extends into the
+near-infrared region of the spectrum. CIR photography utilizes high speed
+film that is subject to degradation prior to processing, which can create
+an overall blue cast to the image.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Valid Values:</dt>
+  <dd>Black and White</dd>
+  <dd>Color Infrared</dd>
+</dl>
+</dd>
+
+<dt><a NAME="scale"></a>Scale</dt>
+<dd>
+The black-and-white film is exposed in a precision aerial
+    camera with a focal length 15.3 cm (6 inches), producing a photograph at a
+    scale of 1:80,000 (1 inch equals about 1.25 miles). Each black-and-white
+    exposure covers nearly 130 square miles of terrain. The color infrared film
+    is exposed in a second aerial camera with a focal length of 21.0 cm (8.25
+    inches), producing a photograph at a scale of 1:58,000 (1 inch equals about
+    0.9 miles).  Each color infrared exposure covers nearly 68 square miles of
+    terrain.
+</dd>
+
+<dt><a NAME="ul_corner_lat"></a>Upper Left Corner</dt>
+<dd class="definition">
+Product tile upper left corner latitude and longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>DDD&deg;MM'SS&quot;H</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>DDD = Degrees (Valid values: 24-49N for Latitude, 66-126W for Longitude)</dd>
+  <dd>MM = Minutes (Valid values: 0-59)</dd>
+  <dd>SS = Seconds (Valid values: 0-59)</dd>
+  <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+</dd>
+
+<dt><a NAME="ur_corner_lat"></a>Upper Right Corner</dt>
+<dd>
+Product tile upper right corner latitude and longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>DDD&deg;MM'SS&quot;H</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>DDD = Degrees (Valid values: 24-49N for Latitude, 66-126W for Longitude)</dd>
+  <dd>MM = Minutes (Valid values: 0-59)</dd>
+  <dd>SS = Seconds (Valid values: 0-59)</dd>
+  <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+</dd>
+
+<dt><a NAME="ll_corner_lat"></a>Lower Left Corner</dt>
+<dd>
+Product tile lower left corner latitude and longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>DDD&deg;MM'SS&quot;H</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>DDD = Degrees (Valid values: 24-49N for Latitude, 66-126W for Longitude)</dd>
+  <dd>MM = Minutes (Valid values: 0-59)</dd>
+  <dd>SS = Seconds (Valid values: 0-59)</dd>
+  <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+</dd>
+
+<dt><a NAME="lr_corner_lat"></a>Lower Right Corner</dt>
+<dd>
+Product tile lower right corner latitude and longitude.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>DDD&deg;MM'SS&quot;H</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>DDD = Degrees (Valid values: 24-49N for Latitude, 66-126W for Longitude)</dd>
+  <dd>MM = Minutes (Valid values: 0-59)</dd>
+  <dd>SS = Seconds (Valid values: 0-59)</dd>
+  <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+</dd>
+
+<dt><a NAME="scene_center_lat"></a>Scene Center</dt>
+<dd>
+The actual latitude and longitude of the center point on the full scene.
+Hemisphere indicated by N = North, S = South, E = East and W = West.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>DDD&deg;MM'SS&quot;H</dd>
+</dl>
+<dl>
+  <dt>Where:</dt>
+  <dd>DDD = Degrees (Valid values: 24-49N for Latitude, 66-126W for Longitude)</dd>
+  <dd>MM = Minutes (Valid values: 0-59)</dd>
+  <dd>SS = Seconds (Valid values: 0-59)</dd>
+  <dd>H = Hemisphere (Valid values: N or S for Latitude, E or W for Longitude)</dd>
+</dl>
+</dd>
+
+<dt><a NAME="county"></a>County</dt>
+<dd class="definition">
+The county in which the photograph was taken.
+</dd>
+
+<dt><a NAME="state"></a>State</dt>
+<dd class="definition">
+This field is used to identify the state in which the photograph was taken.
+</dd>
+
+<dt><a NAME="nominal_focal_length"></a>Nominal Focal Length</dt>
+<dd>
+The distance measured along the lens axis from the rear nodal point
+to the imaging surface plane used for the classification of lenses.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Valid Values:</dt>
+  <dd>6 inches for B&amp;W</dd>
+  <dd>8.25 inches for CIR</dd>
+</dl>
+</dd>
+
+<dt><a NAME="entity_id"></a>Entity ID</dt>
+<dd>
+This field is used to identify data which can be ordered
+    in any combination of unique products.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt>Format:</dt>
+  <dd>DDAPPPPPPRRRRFFF</dd>
+</dl>
+<dl>
+  <dd>DD = Data Set Identifier (NB for black &amp; white;
+      NC for color infrared)</dd>
+  <dd>A = Agency Identifier where 1 indicates USGS</dd>
+  <dd>PPPPPP = Project Name (6 characters)</dd>
+  <dd>RRRR = Roll Number (4 characters) *</dd>
+  <dd>FFF = Frame Number (3 characters) *</dd>
+</dl>
+<dl>
+  <dt>Format Example:</dt>
+  <dd>NC1NHAP840053084</dd>
+</dl>
+<dl>
+  <dd>NC = Color Infrared</dd>
+  <dd>1 = USGS Agency Identifier</dd>
+  <dd>NHAP84 = Project Name</dd>
+  <dd>0053 = Roll Number *</dd>
+  <dd>084 = Frame Number *</dd>
+</dl>
+<dt></dt>
+<dd>* Depending upon the entity ID, some of the information may be preceded
+by zero-filled spaces.</dd>
+</dd>
+
+<dt><a NAME="product_available"></a>Product Available</dt>
+<dd class="definition">
+The products available for a digital photo.
+</dd>
+<dd class="defined_values">
+<dl>
+  <dt> Valid Values:</dt>
+  <dd>Medium Resolution and Scanned Products = Medium resolution digitized
+    products and High Resolution scanned products are available </dd>
+  <dd>Medium-resolution digitized files are created at approximately 600 dpi
+    with an output image size of around five inches square. The file sizes 
+    are approximately 15 megabytes for black and white images and 45 megabytes
+    for color images.
+  </dd>
+  <dd>Scanned only = Only high-resolution scanned products are available</dd>
+  <dd>High-resolution scanned files are created at approximately 1200 dpi 
+    with an output image size of around nine inches square. The file sizes
+    are approximately 120 megabytes for black and white images and 360 
+    megabytes for color images. </dd>
+</dl>
+</dd>
+
+</div>
+
+</body>
+</html>
