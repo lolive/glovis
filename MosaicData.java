@@ -1453,7 +1453,7 @@ public class MosaicData extends Observable implements Runnable, WorkMonitor
         gridRow = gridCell.y;
 
         // TBD - Should the mosaicCells array size be configurable by sensor?
-        URL codebase = applet.getCodeBase();
+        URL codebase = CodeBase.getGlovisURL();
         int index = 0;
 
         // the column center index also tells us the number of grid columns
@@ -2062,7 +2062,7 @@ public class MosaicData extends Observable implements Runnable, WorkMonitor
 
         // all the TOC's that can be reused have been copied.  So now, allocate
         // new ones where needed.
-        URL codebase = applet.getCodeBase();
+        URL codebase = CodeBase.getGlovisURL();
         for(int i = 0; i < newTOC.length; i++)
         {
             // create a new TOC if needed

@@ -389,7 +389,7 @@ class ImageLoader implements Runnable, WorkMonitor
                     if (applet.verboseOutput)
                         System.out.println("Loading image " + imgName);
                     // start the image loading
-                    img = applet.getImage(applet.getCodeBase(),imgName);
+                    img = applet.getImage(CodeBase.getGlovisURL(),imgName);
 
                     // save the scene and the resolution
                     scenes[id] = scene;

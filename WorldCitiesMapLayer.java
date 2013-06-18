@@ -82,7 +82,7 @@ public class WorldCitiesMapLayer extends TiledMapLayer
             // build a URL for this file
             try
             {
-                CurrentURL = new URL(applet.getCodeBase(), files[ii]);
+                CurrentURL = new URL(CodeBase.getGlovisURL(), files[ii]);
             }
             catch(IOException e)
             {
