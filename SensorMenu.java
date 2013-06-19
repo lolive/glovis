@@ -1592,7 +1592,7 @@ System.out.println("Sensor  " + sensorToCreate + " NOT IMPLEMENTED YET");
         }
         else if (sensorToCreate.equals("NHAP_BW"))
         {
-                info.sensor = new NhapDataset(applet, "B&W NHAP", "nhap/bw",
+                info.sensor = new NhapDataset(applet, "BW NHAP", "nhap/bw",
                                               16);
                 info.menu = aerialMenu;
                 info.description
