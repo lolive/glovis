@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY test "http://toto/#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="&test;"
+         xmlns:owl="&owl;"
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""/>
+
+<!-- Classes -->
+  <owl:Class rdf:about="Satellite"
+             rdfs:label="Satellite">
+    <rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="SubSatellite"
+             rdfs:label="SubSatellite">
+    <rdfs:subClassOf rdf:resource="Satellite"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&rdfs;Resource"/>
+
+<!-- Datatypes -->
+  <rdfs:Datatype rdf:about="&xsd;string"/>
+
+<!-- Annotation Properties -->
+  <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+
+<!-- Datatype Properties -->
+  <owl:DatatypeProperty rdf:about="&test;javaCodeToImgUrl"
+                        rdfs:label="javaCodeToImgUrl">
+    <rdfs:domain rdf:resource="Satellite"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="&test;sensorData"
+                        rdfs:label="sensorData">
+    <rdfs:domain rdf:resource="Satellite"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>
+
