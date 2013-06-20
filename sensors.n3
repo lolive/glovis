@@ -1,0 +1,1060 @@
+#Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp 
+        #    using base file:///cygdrive/c/temp/glovis/glovis/src/pellet/
+        
+#  Notation3 generation by
+#       notation3.py,v 1.200 2007/12/11 21:18:08 syosi Exp
+
+#   Base was: file:///cygdrive/c/temp/glovis/glovis/src/pellet/
+     @prefix : <http://toto/#> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    
+    <http://toto/>     a owl:Ontology .
+    
+    :AntarcticaEtmDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append("" + resolution);
+
+        // load correct image based on full res or mosaic view
+        if (resolution != 1000)
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         :sensorData "lima";
+         = :AntarcticaEtmDataset .
+    
+    :AsterSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the year and entity id
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+
+        // the entityID is usually in version:dbID, and files are named with 
+        // just the dbID, so strip of the version number
+        int filenameStart = scene.entityID.indexOf(':') + 1;
+        imgName.append(scene.entityID.substring(filenameStart));
+
+        imgName.append("_");
+        imgName.append(Integer.toString(resolution));
+
+        // load correct image based on full res or mosaic view
+        if (resolution == 155)
+        {
+            // full resolution, so use the full resolution jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area, so use the 1000- or 400-meter resolution .gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         = :AsterSensor .
+    
+    :AsterTIRDataPoolSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "aster_datapool/tir";
+         :subProjectOf :AsterSensor;
+         = :AsterTIRDataPoolSensor .
+    
+    :AsterTIRSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "aster/tir";
+         :subProjectOf :AsterSensor;
+         = :AsterTIRSensor .
+    
+    :AsterVNIRDataPoolSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "aster_datapool/vnir";
+         :subProjectOf :AsterSensor;
+         = :AsterVNIRDataPoolSensor .
+    
+    :AsterVNIRSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "aster/vnir";
+         :subProjectOf :AsterSensor;
+         = :AsterVNIRSensor .
+    
+    :BW_NHAP     a owl:Thing;
+         :sensorPath "nhap/bw";
+         = :BW_NHAP .
+    
+    :CIR_NHAP     a owl:Thing;
+         :sensorPath "nhap/cir";
+         = :CIR_NHAP .
+    
+    :EO1AliSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "eo1/ali";
+         :subProjectOf :EO1Sensor;
+         = :EO1AliSensor .
+    
+    :EO1HypSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "eo1/hyp";
+         :subProjectOf :EO1Sensor;
+         = :EO1HypSensor .
+    
+    :EO1Sensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append(fourDigitFormat.format(resolution));
+
+        // load correct image based on full res or mosaic view
+        if (resolution != 1000)
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         = :EO1Sensor .
+    
+    :Gls1975Mss1_3Dataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "gls/gls1975_mss1_3";
+         :subProjectOf :LandsatSensor;
+         = :Gls1975Mss1_3Dataset .
+    
+    :Gls1975Mss4_5Dataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "gls/gls1975_mss4_5";
+         :subProjectOf :LandsatSensor;
+         = :Gls1975Mss4_5Dataset .
+    
+    :Gls1990Dataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "gls/gls1990";
+         :subProjectOf :LandsatSensor;
+         = :Gls1990Dataset .
+    
+    :Gls2000Dataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "gls/gls2000";
+         :subProjectOf :LandsatSensor;
+         = :Gls2000Dataset .
+    
+    :Gls2005Dataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "gls/gls2005";
+         :subProjectOf :LandsatSensor;
+         = :Gls2005Dataset .
+    
+    :Gls2005EO1Dataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "gls/gls2005_eo1";
+         :subProjectOf :EO1Sensor;
+         = :Gls2005EO1Dataset .
+    
+    :Gls2010Dataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "gls/gls2010";
+         :subProjectOf :LandsatSensor;
+         = :Gls2010Dataset .
+    
+    :Gls2010EO1Dataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "gls/gls2010_eo1";
+         :subProjectOf :EO1Sensor;
+         = :Gls2010EO1Dataset .
+    
+    :ImageLoader     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl "}";
+         = :ImageLoader .
+    
+    :Landsat1_3MssSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "l1_3mss";
+         :subProjectOf :LandsatSensor;
+         = :Landsat1_3MssSensor .
+    
+    :Landsat4_5MssSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "l4_5mss";
+         :subProjectOf :LandsatSensor;
+         = :Landsat4_5MssSensor .
+    
+    :Landsat8OLISensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "l8oli";
+         :subProjectOf :LandsatSensor;
+         = :Landsat8OLISensor .
+    
+    :LandsatCombined     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName(Metadata scene, int pixelSize)
+    {
+        return scene.getSensor().makeImageName(scene,pixelSize);
+}""";
+         :sensorData "";
+         :subProjectOf :LandsatSensor;
+         = :LandsatCombined .
+    
+    :LandsatETMSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "l7";
+         :subProjectOf :LandsatSensor;
+         = :LandsatETMSensor .
+    
+    :LandsatETMSlcOffSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "l7slc_off";
+         :subProjectOf :LandsatSensor;
+         = :LandsatETMSlcOffSensor .
+    
+    :LandsatSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append("" + resolution);
+
+        // load correct image based on full res or mosaic view
+        if (resolution != 1000)
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         = :LandsatSensor .
+    
+    :LandsatTMSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "l5";
+         :subProjectOf :LandsatSensor;
+         = :LandsatTMSensor .
+    
+    :MCD15A2_1AI     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mcd15a2_lai";
+         :subProjectOf :ModisSensor;
+         = :MCD15A2_1AI .
+    
+    :MCD43A1     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mcd43a1";
+         :subProjectOf :ModisSensor;
+         = :MCD43A1 .
+    
+    :MCD43A3     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mcd43a3";
+         :subProjectOf :ModisSensor;
+         = :MCD43A3 .
+    
+    :MCD43B1     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mcd43b1";
+         :subProjectOf :ModisSensor;
+         = :MCD43B1 .
+    
+    :MCD43B3     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mcd43b3";
+         :subProjectOf :ModisSensor;
+         = :MCD43B3 .
+    
+    :MOD09GA     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mod09ga";
+         :subProjectOf :ModisSensor;
+         = :MOD09GA .
+    
+    :MOD09Q1     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mod09q1";
+         :subProjectOf :ModisSensor;
+         = :MOD09Q1 .
+    
+    :MOD11A1_1ight     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mod11a1_night";
+         :subProjectOf :ModisSensor;
+         = :MOD11A1_1ight .
+    
+    :MOD11A2_1ight     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mod11a2_night";
+         :subProjectOf :ModisSensor;
+         = :MOD11A2_1ight .
+    
+    :MOD11B1_1ight     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mod11b1_night";
+         :subProjectOf :ModisSensor;
+         = :MOD11B1_1ight .
+    
+    :MOD14A2     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mod14a2";
+         :subProjectOf :ModisSensor;
+         = :MOD14A2 .
+    
+    :MOD43B3     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mod43b3";
+         :subProjectOf :ModisSensor;
+         = :MOD43B3 .
+    
+    :MOD44B_1CF     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/mod44b_vcf";
+         :subProjectOf :ModisSensor;
+         = :MOD44B_1CF .
+    
+    :MYD09GA     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/myd09ga";
+         :subProjectOf :ModisSensor;
+         = :MYD09GA .
+    
+    :MYD09Q1     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/myd09q1";
+         :subProjectOf :ModisSensor;
+         = :MYD09Q1 .
+    
+    :MYD11A1_1ight     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/myd11a1_night";
+         :subProjectOf :ModisSensor;
+         = :MYD11A1_1ight .
+    
+    :MYD11A2_1ight     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/myd11a2_night";
+         :subProjectOf :ModisSensor;
+         = :MYD11A2_1ight .
+    
+    :MYD11B1_1ight     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/myd11b1_night";
+         :subProjectOf :ModisSensor;
+         = :MYD11B1_1ight .
+    
+    :MYD14A2     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "modis/myd14a2";
+         :subProjectOf :ModisSensor;
+         = :MYD14A2 .
+    
+    :ModisSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+
+        if (resolution != 5000)
+        {
+            // the image is named using the scene ID up to the production date,
+            // so get the scene ID up to the production date
+            int index = scene.secondaryID.lastIndexOf('.');
+            int index2 = scene.secondaryID.lastIndexOf('.',index - 1);
+            imgName.append(scene.secondaryID.substring(0,index2));
+            // append the browse number
+            if (scene.browseNumber > 0)
+            {
+                imgName.append("_");
+                imgName.append(scene.browseNumber);
+            }
+
+            imgName.append(".");
+
+            // convert the resolution to kilometers and add it to the file name
+            imgName.append((resolution/1000));
+            imgName.append("km.jpg");
+        }
+        else 
+        {
+            // for the 5km browse, just replace the "hdf" at the end with "jpg"
+            // and insert the browse number
+            int index = scene.secondaryID.lastIndexOf('.');
+            imgName.append(scene.secondaryID.substring(0,index));
+            if (scene.browseNumber > 0)
+            {
+                imgName.append("_");
+                imgName.append(scene.browseNumber);
+            }
+            imgName.append(".jpg");
+        }
+
+        return imgName.toString();
+}""";
+         = :ModisSensor .
+    
+    :MrlcDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append("" + resolution);
+
+        // load correct image based on full res or mosaic view
+        if (resolution != 1000)
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         :subProjectOf :LandsatSensor;
+         = :MrlcDataset .
+    
+    :NalcDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append("" + resolution);
+
+        // load correct image based on full res or mosaic view
+        if (resolution != 1000)
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         :sensorData "nalc";
+         = :NalcDataset .
+    
+    :NappDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        if (resolution != resolutions[1])
+            imgName.append("_lowRes");
+        imgName.append(".jpg");
+
+        return imgName.toString();
+}""";
+         :sensorData "napp";
+         = :NappDataset .
+    
+    :NhapDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        if (resolution != resolutions[1])
+            imgName.append("_lowRes");
+        imgName.append(".jpg");
+
+        return imgName.toString();
+}""";
+         = :NhapDataset .
+    
+    :Ortho1_3MssDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append(resolution);
+
+        // load correct image based on full res or mosaic view
+        if (resolution != 1000)
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         :sensorData "ortho/mss1_3";
+         = :Ortho1_3MssDataset .
+    
+    :Ortho4_5MssDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append(resolution);
+
+        // load correct image based on full res or mosaic view
+        if (resolution != 1000)
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         :sensorData "ortho/mss4_5";
+         = :Ortho4_5MssDataset .
+    
+    :OrthoETMDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append(resolution);
+
+        // load correct image based on full res or mosaic view
+        if (resolution != 1000)
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         :sensorData "ortho/etm";
+         = :OrthoETMDataset .
+    
+    :OrthoPanSharpETMDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append(resolution);
+
+        // load correct image based on full res or mosaic view
+        if (resolution != 1000)
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         :sensorData "ortho/pansharp_etm";
+         = :OrthoPanSharpETMDataset .
+    
+    :OrthoTMDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/y");
+        imgName.append(scene.year);
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append(resolution);
+
+        // load correct image based on full res or mosaic view
+        if (resolution != 1000)
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         :sensorData "ortho/tm";
+         = :OrthoTMDataset .
+    
+    :Sensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl "}";
+         = :Sensor .
+    
+    :SystematicL1GDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "lsat_sys";
+         :subProjectOf :LandsatSensor;
+         = :SystematicL1GDataset .
+    
+    :TerraLookAsterVNIRSensor     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :sensorData "aster/vnir";
+         :subProjectOf :AsterSensor;
+         = :TerraLookAsterVNIRSensor .
+    
+    :TriDecEtmMosaicDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append("" + resolution);
+
+        // load correct image based on the resolution
+        if (resolution != 1000)
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         :sensorData "ortho/etm_mosaic";
+         = :TriDecEtmMosaicDataset .
+    
+    :TriDecTmMosaicDataset     a <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         :javaCodeToImgUrl """    public String makeImageName
+    (
+        Metadata scene,     // I: metadata for scene
+        int resolution      // I: resolution requested in meters
+    )
+    {
+        StringBuffer imgName;
+
+        // build the image name, starting with the TOC directory and adding
+        // the items that make up the file name
+        imgName = new StringBuffer(getCellDirectory(scene.gridCol,
+                                                    scene.gridRow));
+        imgName.append("/");
+        imgName.append(scene.entityID);
+        imgName.append("_");
+        imgName.append("" + resolution);
+
+        // load correct image based on the resolution
+        if (resolution != resolutions[0])
+        {
+            // full resolution uses jpeg files
+            imgName.append(".jpg");
+        }
+        else
+        {
+            // mosaic area uses gif files
+            imgName.append(".gif");
+        }
+
+        return imgName.toString();
+}""";
+         :sensorData "ortho/tm_mosaic";
+         = :TriDecTmMosaicDataset .
+    
+    :javaCodeToImgUrl     a owl:DatatypeProperty;
+         rdfs:domain <http://toto/Satellite>;
+         rdfs:label "javaCodeToImgUrl";
+         rdfs:range xsd:string;
+         rdfs:subPropertyOf :javaCodeToImgUrl,
+                owl:topDataProperty;
+         owl:equivalentProperty :javaCodeToImgUrl;
+         owl:propertyDisjointWith owl:bottomDataProperty .
+    
+    :sensorData     a owl:DatatypeProperty;
+         rdfs:domain <http://toto/Satellite>;
+         rdfs:label "sensorData";
+         rdfs:range xsd:string;
+         rdfs:subPropertyOf :sensorData,
+                owl:topDataProperty;
+         owl:equivalentProperty :sensorData;
+         owl:propertyDisjointWith owl:bottomDataProperty .
+    
+    :sensorPath     a owl:DatatypeProperty;
+         rdfs:subPropertyOf :sensorPath,
+                owl:topDataProperty;
+         owl:equivalentProperty :sensorPath;
+         owl:propertyDisjointWith owl:bottomDataProperty .
+    
+    :subProjectOf     a owl:ObjectProperty;
+         rdfs:subPropertyOf :subProjectOf,
+                owl:topObjectProperty;
+         owl:equivalentProperty :subProjectOf;
+         owl:propertyDisjointWith owl:bottomObjectProperty .
+    
+    <http://toto/Satellite>     a owl:Class;
+         rdfs:label "Satellite";
+         rdfs:subClassOf <http://toto/Satellite>,
+                rdfs:Resource,
+                owl:Thing;
+         owl:disjointWith owl:Nothing;
+         owl:equivalentClass <http://toto/Satellite> .
+    
+    <http://toto/SubSatellite>     a owl:Class;
+         rdfs:label "SubSatellite";
+         rdfs:subClassOf <http://toto/Satellite>,
+                <http://toto/SubSatellite>,
+                rdfs:Resource,
+                owl:Thing;
+         owl:disjointWith owl:Nothing;
+         owl:equivalentClass <http://toto/SubSatellite> .
+    
+    rdfs:Resource     a owl:Class;
+         rdfs:subClassOf rdfs:Resource,
+                owl:Thing;
+         owl:disjointWith owl:Nothing;
+         owl:equivalentClass rdfs:Resource .
+    
+    rdfs:label     a owl:AnnotationProperty .
+    
+    xsd:string     a rdfs:Datatype .
+    
+    owl:Nothing     a owl:Class;
+         rdfs:subClassOf <http://toto/Satellite>,
+                <http://toto/SubSatellite>,
+                rdfs:Resource,
+                owl:Nothing,
+                owl:Thing;
+         owl:complementOf owl:Thing;
+         owl:disjointWith <http://toto/Satellite>,
+                <http://toto/SubSatellite>,
+                rdfs:Resource,
+                owl:Nothing,
+                owl:Thing;
+         owl:equivalentClass owl:Nothing .
+    
+    owl:Thing     a owl:Class;
+         rdfs:subClassOf owl:Thing;
+         owl:complementOf owl:Nothing;
+         owl:disjointWith owl:Nothing;
+         owl:equivalentClass owl:Thing .
+    
+    owl:bottomDataProperty     a owl:DatatypeProperty;
+         rdfs:subPropertyOf :javaCodeToImgUrl,
+                :sensorData,
+                :sensorPath,
+                owl:bottomDataProperty,
+                owl:topDataProperty;
+         owl:equivalentProperty owl:bottomDataProperty;
+         owl:propertyDisjointWith :javaCodeToImgUrl,
+                :sensorData,
+                :sensorPath,
+                owl:bottomDataProperty,
+                owl:topDataProperty .
+    
+    owl:bottomObjectProperty     a owl:ObjectProperty,
+                owl:SymmetricProperty;
+         rdfs:subPropertyOf :subProjectOf,
+                owl:bottomObjectProperty,
+                owl:topObjectProperty;
+         owl:equivalentProperty owl:bottomObjectProperty;
+         owl:propertyDisjointWith :subProjectOf,
+                owl:bottomObjectProperty,
+                owl:topObjectProperty .
+    
+    owl:topDataProperty     a owl:DatatypeProperty;
+         rdfs:subPropertyOf owl:topDataProperty;
+         owl:equivalentProperty owl:topDataProperty;
+         owl:propertyDisjointWith owl:bottomDataProperty .
+    
+    owl:topObjectProperty     a owl:ObjectProperty,
+                owl:SymmetricProperty,
+                owl:TransitiveProperty;
+         rdfs:subPropertyOf owl:topObjectProperty;
+         owl:equivalentProperty owl:topObjectProperty;
+         owl:propertyDisjointWith owl:bottomObjectProperty .
+    
+#ENDS

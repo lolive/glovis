@@ -34,3 +34,12 @@ for i in `grep -ls makeImageName *java`;do echo -ne ":${i%\.java} :javaCodeToImg
 
 #All:
 grep class.*extends.*Sensor *java|sed 's/\(.*\)\.java.*extends \(.*\)/:\1 :subProjectOf :\2 . /'|grep -v ' :Sensor . $' >> $SENSORSFILE
+
+#--------------
+# 4: Infer types from schema
+#--------------
+cd pellet
+./pellet.sh query -q all.sparql ../sensors.rdfs ../$SENSORSFILE | ../cwm/cwm --rdf --n3 > ../$SENSORSFILE.tmp
+mv ../$SENSORSFILE.tmp ../$SENSORSFILE
+cd - 
+
